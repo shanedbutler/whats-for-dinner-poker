@@ -1,0 +1,307 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fullName": "Bob Dancer",
+            "email": "bdancer@excite.com"
+        }
+    ],
+    "decks": [
+        {
+            "id": 1,
+            "name": "Summer"
+        },
+        {
+            "id": 2,
+            "name": "Winter"
+        }
+    ],
+    "suits": [
+        {
+            "id": 1,
+            "name": "Spades",
+            "description": "New"
+        },
+        {
+            "id": 2,
+            "name": "Hearts",
+            "description": "Healthyish"
+        },
+        {
+            "id": 3,
+            "name": "Diamonds",
+            "description": "Fast/Easy"
+        },
+        {
+            "id": 4,
+            "name": "Clubs",
+            "description": "Classics"
+        }
+    ],
+    "cards": [
+        {
+            "id": 1,
+            "name": "Tomato Pie",
+            "deckId": 1,
+            "suiteId": 4
+        },
+        {
+            "id": 2,
+            "name": "Potato Salad",
+            "deckId": 1,
+            "suiteId": 4
+        },
+        {
+            "id": 3,
+            "name": "Cucumber Salad",
+            "deckId": 1,
+            "suiteId": 2
+        },
+        {
+            "id": 4,
+            "name": "Pasta Fagioli",
+            "deckId": 2,
+            "suiteId": 4
+        },
+        {
+            "id": 5,
+            "name": "Japanese Curry",
+            "deckId": 2,
+            "suiteId": 1
+        },
+        {
+            "id": 6,
+            "name": "Purloo",
+            "deckId": 1,
+            "suiteId": 1
+        },
+        {
+            "id": 7,
+            "name": "Spaghetti",
+            "deckId": 1,
+            "suiteId": 3
+        },
+        {
+            "id": 8,
+            "name": "Chili",
+            "deckId": 2,
+            "suiteId": 4
+        },
+        {
+            "id": 9,
+            "name": "Okonomiyaki",
+            "deckId": 1,
+            "suiteId": 1
+        },
+        {
+            "id": 10,
+            "name": "Split Pea Soup",
+            "deckId": 2,
+            "suiteId": 2
+        },
+        {
+            "id": 11,
+            "name": "Mapo Tofu",
+            "deckId": 2,
+            "suiteId": 2
+        },
+        {
+            "id": 12,
+            "name": "Cabbage Rolls",
+            "deckId": 2,
+            "suiteId": 4
+        },
+        {
+            "id": 13,
+            "name": "Roast Chicken",
+            "deckId": 2,
+            "suiteId": 3
+        },
+        {
+            "id": 14,
+            "name": "Adobo",
+            "deckId": 2,
+            "suiteId": 4
+        },
+        {
+            "id": 15,
+            "name": "Cauliflower Soup",
+            "deckId": 2,
+            "suiteId": 3
+        },
+        {
+            "id": 16,
+            "name": "Coq au Vin",
+            "deckId": 2,
+            "suiteId": 4
+        },
+        {
+            "id": 17,
+            "name": "Mushroom Bourguignon",
+            "deckId": 2,
+            "suiteId": 3
+        },
+        {
+            "id": 18,
+            "name": "BBQ Chicken",
+            "deckId": 1,
+            "suiteId": 4
+        },
+        {
+            "id": 19,
+            "name": "Hamburgers",
+            "deckId": 1,
+            "suiteId": 4
+        },
+        {
+            "id": 20,
+            "name": "Hard Tacos",
+            "deckId": 1,
+            "suiteId": 3
+        },
+        {
+            "id": 21,
+            "name": "Asian Slaw",
+            "deckId": 1,
+            "suiteId": 2
+        },
+        {
+            "id": 22,
+            "name": "Succotash",
+            "deckId": 1,
+            "suiteId": 2
+        },
+        {
+            "id": 23,
+            "name": "Gazpacho",
+            "deckId": 1,
+            "suiteId": 2
+        },
+        {
+            "id": 24,
+            "name": "Polenta",
+            "deckId": 2,
+            "suiteId": 3
+        },
+        {
+            "id": 25,
+            "name": "Fried Fish",
+            "deckId": 1,
+            "suiteId": 4
+        },
+        {
+            "id": 26,
+            "name": "Chilled Soba",
+            "deckId": 1,
+            "suiteId": 1
+        },
+        {
+            "id": 27,
+            "name": "Fresh Spring Rolls",
+            "deckId": 1,
+            "suiteId": 1
+        },
+        {
+            "id": 28,
+            "name": "Lentil Soup",
+            "deckId": 2,
+            "suiteId": 2
+        },
+        {
+            "id": 29,
+            "name": "Okra Soup",
+            "deckId": 1,
+            "suiteId": 1
+        },
+        {
+            "id": 30,
+            "name": "Ratatouille",
+            "deckId": 1,
+            "suiteId": 3
+        },
+        {
+            "id": 31,
+            "name": "Fried Rice",
+            "deckId": 1,
+            "suiteId": 3
+        },
+        {
+            "id": 32,
+            "name": "Kung Pao Chicken",
+            "deckId": 1,
+            "suiteId": 1
+        },
+        {
+            "id": 33,
+            "name": "Tomato Sandwiches",
+            "deckId": 1,
+            "suiteId": 2
+        },
+        {
+            "id": 34,
+            "name": "Beef and Barley Soup",
+            "deckId": 2,
+            "suiteId": 4
+        },
+        {
+            "id": 35,
+            "name": "Tomato Galette",
+            "deckId": 1,
+            "suiteId": 1
+        },
+        {
+            "id": 36,
+            "name": "Sheet Pan Dinner",
+            "deckId": 2,
+            "suiteId": 3
+        },
+        {
+            "id": 37,
+            "name": "Borscht",
+            "deckId": 2,
+            "suiteId": 2
+        },
+        {
+            "id": 38,
+            "name": "Hoppin' John",
+            "deckId": 2,
+            "suiteId": 1
+        },
+        {
+            "id": 39,
+            "name": "Ramen",
+            "deckId": 2,
+            "suiteId": 3
+        },
+        {
+            "id": 40,
+            "name": "Cheese Fondue",
+            "deckId": 2,
+            "suiteId": 1
+        },
+        {
+            "id": 41,
+            "name": "Cassoulet",
+            "deckId": 2,
+            "suiteId": 1
+        },
+        {
+            "id": 42,
+            "name": "Roast Cauliflower",
+            "deckId": 2,
+            "suiteId": 2
+        },
+        {
+            "id": 43,
+            "name": "Tortellini",
+            "deckId": 2,
+            "suiteId": 3
+        },
+        {
+            "id": 44,
+            "name": "Okra and Tomatoes",
+            "deckId": 1,
+            "suiteId": 2
+        }
+    ]
+}
