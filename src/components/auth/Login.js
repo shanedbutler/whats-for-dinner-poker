@@ -6,7 +6,7 @@ import { fetchUsers } from "../../utils/apiUtils.js"
 //Module component handles Login page
 
 export const Login = () => {
-    const [email, set] = useState("bdancer304@gmail.com")
+    const [email, setEmail] = useState("bdancer304@gmail.com")
     const navigate = useNavigate()
 
     const handleLogin = (e) => {
@@ -29,30 +29,39 @@ export const Login = () => {
     }
 
     return (
-        <main className="container--login">
-            <section>
+            <main className="container is-max-desktop">
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>What's for Dinner Poker</h1>
-                    <h2>Please sign in</h2>
-                    <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
-                        <input type="email"
-                            value={email}
-                            onChange={evt => set(evt.target.value)}
-                            className="form-control"
-                            placeholder="Email address"
-                            required autoFocus />
+                    <fieldset className="field">
+                        <p className="control has-icons-left">
+                            <input className="input"
+                                type="email"
+                                placeholder="Email"
+                                onChange={evt => setEmail(evt.target.value)}
+                                required autoFocus />
+                            <span className="icon is-small is-left">
+                                <i className="fas fa-envelope"></i>
+                            </span>
+                        </p>
                     </fieldset>
-                    <fieldset>
-                        <button type="submit">
-                            Sign in
-                        </button>
+                    <fieldset className="field">
+                        <p className="control has-icons-left">
+                            <input className="input" type="password" placeholder="Password" />
+                            <span className="icon is-small is-left">
+                                <i className="fas fa-lock"></i>
+                            </span>
+                        </p>
+                    </fieldset>
+                    <fieldset className="field">
+                        <p className="control">
+                            <button className="button is-success">
+                                Login
+                            </button>
+                        </p>
                     </fieldset>
                 </form>
-            </section>
-            <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
-            </section>
-        </main>
+                <section className="link--register">
+                    <Link to="/register">Not a member yet?</Link>
+                </section>
+            </main>
     )
 }
