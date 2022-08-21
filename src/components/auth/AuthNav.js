@@ -1,17 +1,14 @@
 import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import "./Navbar.css"
+import { Link } from "react-router-dom"
 
-//Module component returns navbar
-
-export const Navbar = () => {
-    const navigate = useNavigate()
+export const AuthNav = () => {
 
     const [isActive, setIsActive] = useState(false)
 
     const toggleActive = () => {
         setIsActive(!isActive)
     }
+
     return (
         <div className="container is-fluid is-max-desktop mt-5">
             <nav className="navbar is-size-5" role="navigation" aria-label="main navigation">
@@ -39,26 +36,23 @@ export const Navbar = () => {
 
                     <div className="navbar-end">
                         <Link
-                            onClick={toggleActive}
-                            className="navbar-item" to="/play">
-                            Play
+                        onClick={toggleActive}
+                        className="navbar-item" to="/login">
+                            Login
+                        </Link>
+
+                        <Link 
+                        onClick={toggleActive}
+                        className="navbar-item" to="/register">
+                            Sign-Up
                         </Link>
 
                         <Link
-                            onClick={toggleActive}
-                            className="navbar-item" to="/history">
-                            Game History
+                        onClick={toggleActive}
+                        className="navbar-item" to="/about">
+                            About
                         </Link>
-                        {
-                            localStorage.getItem("dinnerPokerUser")
-                                ?
-                                <Link className="navbar-item" to="" onClick={() => {
-                                    localStorage.removeItem("dinnerPokerUser")
-                                    navigate("/", { replace: true })
-                                }}>Logout</Link>
 
-                                : ""
-                        }
                     </div>
                 </div>
             </nav >

@@ -1,0 +1,10 @@
+/* Fix centering of icons */
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back {
+    max-width: 339px;
+}
