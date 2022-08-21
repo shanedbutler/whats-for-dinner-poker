@@ -11,6 +11,9 @@
 # production
 /build
 
+#bulma
+/mybulma
+
 # misc
 .DS_Store
 .env.local
