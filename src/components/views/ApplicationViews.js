@@ -5,7 +5,7 @@ import { Play } from "../play/Play"
 export const ApplicationViews = () => {
     return (
         <Routes>
-            <Route path="/" element={<h2>Welcome to What's for Dinner Poker</h2>} />
+            <Route path="/" element={<></>} />
             <Route path="/play" element={<Play />} />
             <Route path="/history" element={<History />} />
         </Routes>

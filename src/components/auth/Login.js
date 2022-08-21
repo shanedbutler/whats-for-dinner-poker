@@ -1,7 +1,8 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { fetchUsers } from "../../utils/apiUtils.js"
+import "./auth.css"
+import cardBack from "../../assets/dinner-poker-back-black.png"
 
 //Module component handles Login page
 
@@ -29,8 +30,17 @@ export const Login = () => {
     }
 
     return (
-            <main className="container is-max-desktop">
-                <form className="form--login" onSubmit={handleLogin}>
+        <main className="container is-fluid is-max-desktop columns is-centered">
+            <div className="column is-5-tablet is-5-desktop is-4-widescreen box pt-1 p-5">
+                <div className="has-text-centered">
+                    <figure className="image is-339x486 is-inline-block">
+                        <img className="card-back" src={cardBack}></img>
+                    </figure>
+                </div>
+                <h2 className="is-size-5">
+                    Player Login
+                </h2>
+                <form className="mt-3" onSubmit={handleLogin}>
                     <fieldset className="field">
                         <p className="control has-icons-left">
                             <input className="input"
@@ -59,9 +69,7 @@ export const Login = () => {
                         </p>
                     </fieldset>
                 </form>
-                <section className="link--register">
-                    <Link to="/register">Not a member yet?</Link>
-                </section>
-            </main>
+            </div>
+        </main >
     )
 }
