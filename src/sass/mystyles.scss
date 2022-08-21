@@ -1,33 +1,45 @@
 @charset "utf-8";
 
-// Import a Google Font
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400');
+// Import  Google Fonts
+//Josefin Sans & Noto Serif
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Noto+Serif&display=swap');
 
-// Set your brand colors
+//Import Bulma's variables
+@import "../../mybulma/sass/utilities/initial-variables.sass";
+
+// Set wfdp theme colors
+$green-light: #C3E54A;
 $green: #9FBF2A;
 $green-dark: #748C1B;
-$pink-light: #F2DFE2;
+$pink-light: #fff0f7;
 $pink: #F29B88;
 $pink-dark: #F27166;
 
 // Update Bulma's global variables
 $family-sans-serif: 'Josefin Sans', sans-serif;
+$family-serif: 'Noto Serif', serif;
 $primary: $pink;
 $primary-light: $pink-light;
 $primary-dark: $pink-dark;
+$link-light: $green-light;
 $link: $green;
 $link-dark: $green-dark;
+
+// Navbar
+$navbar-breakpoint: $tablet;
+
+// Footer
 
 // Import only what you need from Bulma
 @import "../../mybulma/sass/base/_all.sass";
 @import "../../mybulma/sass/utilities/_all.sass";
 @import "../../mybulma/sass/elements/button.sass";
-// @import "../../mybulma/sass/elements/container.sass";
+@import "../../mybulma/sass/elements/container.sass";
 // @import "../../mybulma/sass/elements/title.sass";
 @import "../../mybulma/sass/form/_all.sass";
-// @import "../../mybulma/sass/components/navbar.sass";
+@import "../../mybulma/sass/components/navbar.sass";
 // @import "../../mybulma/sass/layout/hero.sass";
 // @import "../../mybulma/sass/layout/section.sass";
 
 //The rest of Bulma
-// @import "../../mybulma/bulma.sass";
+@import "../../mybulma/bulma.sass";

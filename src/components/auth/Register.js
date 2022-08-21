@@ -1,70 +1,114 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { fetchUsers, postOption } from "../../utils/apiUtils.js"
+import "./auth.css"
+import cardBack from "../../assets/dinner-poker-back-black.png"
 
 //Module component handles registration page
 
 export const Register = () => {
-    const [customer, setCustomer] = useState({
-        email: "",
-        username: "",
-    })
-    let navigate = useNavigate()
+
+    const navigate = useNavigate()
+
+    const blankUser = {
+        name: "",
+        email: ""
+    }
+
+    const [user, setUser] = useState(blankUser)
 
     const registerNewUser = () => {
         return (
-        fetchUsers("", postOption(customer))
-            .then(createdUser => {
-                if (createdUser.hasOwnProperty("id")) {
-                    localStorage.setItem("dinnerPokerUser", JSON.stringify({
-                        id: createdUser.id,
-                    }))
+            fetchUsers("", postOption(user))
+                .then(createdUser => {
+                    if (createdUser.hasOwnProperty("id")) {
+                        localStorage.setItem("dinnerPokerUser", JSON.stringify({
+                            id: createdUser.id,
+                        }))
 
-                    navigate("/")
-                }
-            }))
+                        navigate("/")
+                    }
+                }))
     }
 
     const handleRegister = (e) => {
         e.preventDefault()
-        return ( 
-            fetchUsers(`?email=${customer.email}`)
-            .then(response => {
-                if (response.length > 0) {
-                    window.alert("Account with that email address already exists")
-                }
-                else {
-                    registerNewUser()
-                }
-            }))
+        return (
+            fetchUsers(`?email=${user.email}`)
+                .then(response => {
+                    if (response.length > 0) {
+                        window.alert("Account with that email address already exists")
+                    }
+                    else {
+                        registerNewUser()
+                    }
+                }))
     }
 
-    const updateCustomer = (evt) => {
-        const copy = {...customer}
-        copy[evt.target.id] = evt.target.value
-        setCustomer(copy)
+    const handleCancel = (e) => {
+        e.preventDefault()
+        setUser(blankUser)
+        navigate("/")
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
-            <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Register for What's for Dinner Poker</h1>
-                <fieldset>
-                    <label htmlFor="userName"> User Name </label>
-                    <input onChange={updateCustomer}
-                           type="text" id="userName" className="form-control"
-                           placeholder="Enter your username" required autoFocus />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="email"> Email address </label>
-                    <input onChange={updateCustomer}
-                        type="email" id="email" className="form-control"
-                        placeholder="Email address" required />
-                </fieldset>
-                <fieldset>
-                    <button type="submit"> Register </button>
-                </fieldset>
-            </form>
+        <main className="container is-fluid is-max-desktop columns is-centered">
+            <div className="column is-5-tablet is-5-desktop is-4-widescreen box pt-1 p-5">
+                <div className="has-text-centered">
+                    <figure className="image is-339x486 is-inline-block">
+                        <img className="card-back" src={cardBack}></img>
+                    </figure>
+                </div>
+                <h2 className="is-size-5">
+                    Register Player
+                </h2>
+                <form className="mt-3" onSubmit={handleRegister}>
+                    <fieldset className="field">
+                        <p className="control has-icons-left">
+                            <input className="input"
+                                type="text"
+                                placeholder="Name"
+                                onChange={evt => {
+                                    const userCopy = { ...user }
+                                    userCopy.name = evt.target.value
+                                    setUser(userCopy)
+                                }
+                                }
+                                required autoFocus />
+                            <span className="icon is-small is-left">
+                                <i className="fas fa-user"></i>
+                            </span>
+                        </p>
+                    </fieldset>
+                    <fieldset className="field">
+                        <p className="control has-icons-left">
+                            <input className="input"
+                                type="email"
+                                placeholder="Email"
+                                onChange={evt => {
+                                    const userCopy = { ...user }
+                                    userCopy.email = evt.target.value
+                                    setUser(userCopy)
+                                }
+                                }
+                                required />
+                            <span className="icon is-small is-left">
+                                <i className="fas fa-envelope"></i>
+                            </span>
+                        </p>
+                    </fieldset>
+                    <fieldset className="field is-grouped">
+                        <p className="control">
+                            <button type="submit" className="button is-success">
+                                Register
+                            </button>
+                        </p>
+                        <p className="control">
+                            <button onClick={handleCancel} className="button  is-primary">Cancel</button>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
         </main>
     )
 }
