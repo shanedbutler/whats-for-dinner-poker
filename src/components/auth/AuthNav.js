@@ -36,19 +36,16 @@ export const AuthNav = () => {
 
                     <div className="navbar-end">
                         <Link
-                        onClick={toggleActive}
                         className="navbar-item" to="/login">
                             Login
                         </Link>
 
                         <Link 
-                        onClick={toggleActive}
                         className="navbar-item" to="/register">
                             Sign-Up
                         </Link>
 
                         <Link
-                        onClick={toggleActive}
                         className="navbar-item" to="/about">
                             About
                         </Link>
