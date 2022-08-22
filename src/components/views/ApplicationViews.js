@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import { History } from "../history/History"
-import { Play } from "../play/Play"
+import { Play } from "../play/PlayDeck"
 
 export const ApplicationViews = () => {
     return (
