@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { fetchUsers, postOption } from "../../utils/apiUtils.js"
-import "./auth.css"
-import cardBack from "../../assets/dinner-poker-back-black.png"
+import "./Auth.css"
 
 //Module component handles registration page
 
@@ -52,13 +51,8 @@ export const Register = () => {
     }
 
     return (
-        <main className="container is-fluid is-max-desktop columns is-centered">
-            <div className="column is-5-tablet is-5-desktop is-4-widescreen box pt-1 p-5">
-                <div className="has-text-centered">
-                    <figure className="image is-339x486 is-inline-block">
-                        <img className="card-back" src={cardBack}></img>
-                    </figure>
-                </div>
+        <main className="container is-fluid is-max-desktop columns is-centered mt-5">
+            <div className="column is-5-tablet is-5-desktop is-4-widescreen box p-5">
                 <h2 className="is-size-5">
                     Register Player
                 </h2>

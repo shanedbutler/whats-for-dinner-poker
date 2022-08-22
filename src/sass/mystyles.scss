@@ -7,7 +7,7 @@
 //Import Bulma's variables
 @import "../../mybulma/sass/utilities/initial-variables.sass";
 
-// Set wfdp theme colors
+// Set WfDP theme colors
 $green-light: #C3E54A;
 $green: #9FBF2A;
 $green-dark: #748C1B;
@@ -38,8 +38,8 @@ $navbar-breakpoint: $tablet;
 // @import "../../mybulma/sass/elements/title.sass";
 @import "../../mybulma/sass/form/_all.sass";
 @import "../../mybulma/sass/components/navbar.sass";
-// @import "../../mybulma/sass/layout/hero.sass";
-// @import "../../mybulma/sass/layout/section.sass";
+@import "../../mybulma/sass/layout/hero.sass";
+@import "../../mybulma/sass/layout/section.sass";
 
 //The rest of Bulma
 @import "../../mybulma/bulma.sass";

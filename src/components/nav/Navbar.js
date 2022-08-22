@@ -39,13 +39,11 @@ export const Navbar = () => {
 
                     <div className="navbar-end">
                         <Link
-                            onClick={toggleActive}
                             className="navbar-item" to="/play">
                             Play
                         </Link>
 
                         <Link
-                            onClick={toggleActive}
                             className="navbar-item" to="/history">
                             Game History
                         </Link>
