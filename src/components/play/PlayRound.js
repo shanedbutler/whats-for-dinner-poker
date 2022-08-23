@@ -17,28 +17,45 @@ export const PlayRound = () => {
 
     const [held, setHeld] = useState([])
 
-
-    const getDraw = () => {
-
-        //Copy cards array and shuffle using Fisher–Yates method
-        let arr = [...cards]
+    //Fisher–Yates shuffle
+    const shuffle = (arr) => {
         let i = arr.length
         while (--i > 0) {
             let randIndex = Math.floor(Math.random() * (i + 1));
             [arr[randIndex], arr[i]] = [arr[i], arr[randIndex]];
         }
+        return arr
+    }
 
-        //Remove first five cards from array and set removed cards to drawn, then update cards array
-        const drawn = arr.splice(0, 5)
-        setCards(arr)
+    const getDraw = () => {
 
-        //Set drawn cards to state
+        //Draw count is set to 5 less the number of cards held 
+        const drawCount = (5 - held.length)
+
+        //Shuffle cards array
+        const shuffledCards = shuffle(cards)
+
+        //Remove required cards from cards array and set removed cards to drawn, then update cards array
+        let drawn = shuffledCards.splice(0, drawCount)
+        setCards(shuffledCards)
+
+        //Assign each drawn card an index positionId
+        for (let i = 0; i < drawn.length; i++) {
+            drawn[i].positionId = i
+        }
+
+        //Add held cards to drawn in the correct position
+        if (held.length) {
+            held.map(card => drawn.splice(card.positionId, 0, card))
+        }
+        //Set drawn cards to state, drawn is mapped through in component return to render each meal card
         setDraw(drawn)
 
-        //Iterate round
+        //Advance round
         setRoundId(roundId + 1)
     }
 
+    //Get cards for selected deck and set to state
     useEffect(() => {
         fetchCards(`?deckId=${deckId}`)
             .then(cardsArray => setCards(cardsArray))
