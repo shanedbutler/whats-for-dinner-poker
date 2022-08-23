@@ -3,12 +3,12 @@ export const History = () => {
 
     return (
         <>
-            <section class="hero is-small is-link">
-                <div class="hero-body ml-3">
-                    <p class="title">
+            <section className="hero is-small is-link">
+                <div className="hero-body ml-3">
+                    <p className="title">
                         Play History
                     </p>
-                    <p class="subtitle">
+                    <p className="subtitle">
                         Select a game
                     </p>
                 </div>
