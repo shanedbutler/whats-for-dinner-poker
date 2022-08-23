@@ -47,14 +47,9 @@ export const MealCard = (props) => {
             </div>
             <button 
             className="button mt-1"
-            onClick={toggleHold}
-            >
-                Hold
+            onClick={toggleHold}>
+                {!isHeld ? "Hold" : "Held"}
             </button>
         </div>
     )
-
-    //<div className="is-flex is-justify-content-center is-flex-direction-column"></div>
-
 }
-
