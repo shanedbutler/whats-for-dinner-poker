@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
-import { fetchCards } from "../../utils/apiUtils"
-import { MealCard } from "./MealCard"
+import { fetchCards } from "../../utils/apiUtils.js"
+import { PlayCard } from "./PlayCard"
+import { PlayResult } from "./PlayResult.js"
 
 export const PlayRound = () => {
 
@@ -9,7 +10,8 @@ export const PlayRound = () => {
     const location = useLocation()
     const { deckId } = location.state
 
-    const [roundId, setRoundId] = useState(1)
+    const roundsToPlay = 3
+    const [roundCount, setRoundCount] = useState(1)
 
     const [cards, setCards] = useState([])
 
@@ -52,7 +54,7 @@ export const PlayRound = () => {
         setDraw(drawn)
 
         //Advance round
-        setRoundId(roundId + 1)
+        setRoundCount(roundCount + 1)
     }
 
     //Get cards for selected deck and set to state
@@ -62,6 +64,7 @@ export const PlayRound = () => {
     }, [])
 
     return (
+        roundCount <= roundsToPlay ? 
         <>
             <section className="hero is-small is-primary">
                 <div className="hero-body ml-3">
@@ -69,7 +72,7 @@ export const PlayRound = () => {
                         Play
                     </p>
                     <p className="subtitle">
-                        Round {roundId}
+                        Round {roundCount}
                     </p>
                 </div>
             </section>
@@ -84,11 +87,13 @@ export const PlayRound = () => {
                 <div className="column">
                 </div>
                 {
-                    draw.map(card => <MealCard key={card.id} card={card} held={held} setHeld={setHeld} />)
+                    draw.map(card => <PlayCard key={card.id} card={card} held={held} setHeld={setHeld} />)
                 }
                 <div className="column">
                 </div>
             </section>
         </>
+        :
+        <PlayResult finalDraw={draw} />
     )
 }
