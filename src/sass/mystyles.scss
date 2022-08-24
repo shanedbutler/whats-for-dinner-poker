@@ -28,18 +28,30 @@ $link-dark: $green-dark;
 // Navbar
 $navbar-breakpoint: $tablet;
 
-// Footer
-
-// Import only what you need from Bulma
-@import "../../mybulma/sass/base/_all.sass";
-@import "../../mybulma/sass/utilities/_all.sass";
-@import "../../mybulma/sass/elements/button.sass";
-@import "../../mybulma/sass/elements/container.sass";
-// @import "../../mybulma/sass/elements/title.sass";
-@import "../../mybulma/sass/form/_all.sass";
-@import "../../mybulma/sass/components/navbar.sass";
-@import "../../mybulma/sass/layout/hero.sass";
-@import "../../mybulma/sass/layout/section.sass";
+// Import only what you need from Bulma node modules
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/elements/button.sass";
+@import "../../node_modules/bulma/sass/elements/container.sass";
+// @import "../../node_modules/bulma/sass//elements/title.sass";
+@import "../../node_modules/bulma/sass/form/_all.sass";
+@import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/layout/hero.sass";
+@import "../../node_modules/bulma/sass/layout/section.sass";
 
 //The rest of Bulma
-@import "../../mybulma/bulma.sass";
+@import "../../node_modules/bulma/bulma.sass";
+
+// Import only what you need from Bulma (local)
+// @import "../../mybulma/sass/base/_all.sass";
+// @import "../../mybulma/sass/utilities/_all.sass";
+// @import "../../mybulma/sass/elements/button.sass";
+// @import "../../mybulma/sass/elements/container.sass";
+// @import "../../mybulma/sass/elements/title.sass";
+// @import "../../mybulma/sass/form/_all.sass";
+// @import "../../mybulma/sass/components/navbar.sass";
+// @import "../../mybulma/sass/layout/hero.sass";
+// @import "../../mybulma/sass/layout/section.sass";
+
+//The rest of Bulma
+// @import "../../mybulma/bulma.sass";
