@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import "./Play.css"
 
-export const MealCard = (props) => {
+export const PlayCard = (props) => {
 
     const [isHeld, setIsHeld] = useState()
     const toggleHold = () => {

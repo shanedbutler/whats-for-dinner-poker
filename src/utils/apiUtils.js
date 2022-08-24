@@ -27,6 +27,12 @@ export const fetchCards = (resource = "", options = {}) => {
     .then(response => response.json())
 }
 
+export const fetchHistory = (resource = "", options = {}) => {
+  const endPoint = "/history"
+    return fetch(`${API}${endPoint}${resource}`, options)
+    .then(response => response.json())
+}
+
 export const postOption = (bodyContent) => {
     const post = {
         method: "POST",
