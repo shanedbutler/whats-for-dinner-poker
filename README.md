@@ -5,6 +5,7 @@ What's for Dinner Poker is a web-based game that is played to create a five-meal
 What's for Dinner Poker seeks to help meal planning by reducing decision fatigue while remaining interactive, and customizable through user-created decks.
 ## Get started
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 This project uses sass + bulma. You will need sass-cli to compile css before starting the project.
 
 In the project directory, you can run:
