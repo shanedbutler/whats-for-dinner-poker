@@ -4,6 +4,11 @@
       "id": 1,
       "fullName": "Bob Dancer",
       "email": "bdancer304@gmail.com"
+    },
+    {
+      "name": "Shane Butler",
+      "email": "sbutler@odu.edu",
+      "id": 2
     }
   ],
   "decks": [
@@ -16,146 +21,76 @@
       "name": "Winter"
     }
   ],
-  "history": [
-    {
-      "cardId": 21,
-      "positionId": 0,
-      "timestamp": 1661364514006,
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "cardId": 35,
-      "positionId": 1,
-      "timestamp": 1661364514006,
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "cardId": 18,
-      "positionId": 2,
-      "timestamp": 1661364514006,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "cardId": 30,
-      "positionId": 3,
-      "timestamp": 1661364514006,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "cardId": 9,
-      "positionId": 0,
-      "timestamp": 1661364514006,
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "cardId": 31,
-      "positionId": 0,
-      "timestamp": 1661365594900,
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "cardId": 35,
-      "positionId": 0,
-      "timestamp": 1661365594900,
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "cardId": 22,
-      "positionId": 1,
-      "timestamp": 1661365594900,
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "cardId": 2,
-      "positionId": 1,
-      "timestamp": 1661365594900,
-      "userId": 1,
-      "id": 9
-    },
-    {
-      "cardId": 27,
-      "positionId": 2,
-      "timestamp": 1661365594900,
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "cardId": 6,
-      "positionId": 0,
-      "timestamp": 1661365992914,
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "cardId": 22,
-      "positionId": 1,
-      "timestamp": 1661365992914,
-      "userId": 1,
-      "id": 12
-    },
-    {
-      "cardId": 30,
-      "positionId": 2,
-      "timestamp": 1661365992914,
-      "userId": 1,
-      "id": 13
-    },
-    {
-      "cardId": 33,
-      "positionId": 0,
-      "timestamp": 1661365992914,
-      "userId": 1,
-      "id": 14
-    },
-    {
-      "cardId": 23,
-      "positionId": 2,
-      "timestamp": 1661365992914,
-      "userId": 1,
-      "id": 15
-    },
-    {
-      "cardId": 42,
-      "positionId": 0,
-      "timestamp": 1661369875534,
-      "userId": 1,
-      "id": 16
-    },
+  "gameHistory": [
     {
       "cardId": 15,
       "positionId": 0,
-      "timestamp": 1661369875534,
-      "userId": 1,
-      "id": 17
+      "timestamp": 1661450946826,
+      "userId": 2,
+      "id": 1
     },
     {
-      "cardId": 13,
-      "positionId": 2,
-      "timestamp": 1661369875534,
-      "userId": 1,
-      "id": 18
-    },
-    {
-      "cardId": 11,
+      "cardId": 37,
       "positionId": 1,
-      "timestamp": 1661369875534,
-      "userId": 1,
-      "id": 19
+      "timestamp": 1661450946826,
+      "userId": 2,
+      "id": 2
     },
     {
-      "cardId": 10,
+      "cardId": 41,
       "positionId": 2,
-      "timestamp": 1661369875534,
-      "userId": 1,
-      "id": 20
+      "timestamp": 1661450946826,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "cardId": 14,
+      "positionId": 2,
+      "timestamp": 1661450946826,
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "cardId": 8,
+      "positionId": 0,
+      "timestamp": 1661450946826,
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "cardId": 34,
+      "positionId": 0,
+      "timestamp": 1661454332002,
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "cardId": 36,
+      "positionId": 4,
+      "timestamp": 1661454332002,
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "cardId": 17,
+      "positionId": 1,
+      "timestamp": 1661454332002,
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "cardId": 37,
+      "positionId": 2,
+      "timestamp": 1661454332002,
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "cardId": 41,
+      "positionId": 3,
+      "timestamp": 1661454332002,
+      "userId": 2,
+      "id": 10
     }
   ],
   "suits": [
