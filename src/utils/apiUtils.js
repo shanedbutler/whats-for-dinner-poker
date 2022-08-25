@@ -28,7 +28,7 @@ export const fetchCards = (resource = "", options = {}) => {
 }
 
 export const fetchHistory = (resource = "", options = {}) => {
-  const endPoint = "/history"
+  const endPoint = "/gameHistory"
     return fetch(`${API}${endPoint}${resource}`, options)
     .then(response => response.json())
 }
