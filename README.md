@@ -8,13 +8,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project uses Sass to compile custom Bulma styles. You will need sass-cli to compile css before starting the project.
 This project uses json-server in development.
-## `npx json-server -p 8088 api/database.json`
 
 In the project directory, you can run:
-## `npm install`
-## `sass --no-source-map src/sass/mystyles.scss:src/css/mystyles.css`
-## `npm start`
+`npm install`
+`sass --no-source-map src/sass/mystyles.scss:src/css/mystyles.css`
+`npx json-server -p 8088 api/database.json`
+`npm start`
 
 This runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
