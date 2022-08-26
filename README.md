@@ -10,10 +10,10 @@ This project uses Sass to compile custom Bulma styles. You will need sass-cli to
 This project uses json-server in development.
 
 In the project directory, you can run:
-`npm install`
-`sass --no-source-map src/sass/mystyles.scss:src/css/mystyles.css`
-`npx json-server -p 8088 api/database.json`
-`npm start`
+#### `npm install`
+#### `sass --no-source-map src/sass/mystyles.scss:src/css/mystyles.css`
+#### `npx json-server -p 8088 api/database.json`
+#### `npm start`
 
 This runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
