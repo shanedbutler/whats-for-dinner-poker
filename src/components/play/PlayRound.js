@@ -14,37 +14,34 @@ export const PlayRound = () => {
     const roundsToPlay = 2
     const [roundCount, setRoundCount] = useState(0)
 
-    const [cards, setCards] = useState([])
-
+    const [cardDeck, setCardDeck] = useState([])
     const [draw, setDraw] = useState([])
-
     const [held, setHeld] = useState([])
 
-    //Fisher–Yates shuffle
+    //Fisher–Yates shuffle and set to state
     const shuffle = (arr) => {
         let i = arr.length
         while (--i > 0) {
             let randIndex = Math.floor(Math.random() * (i + 1));
             [arr[randIndex], arr[i]] = [arr[i], arr[randIndex]];
         }
-        return arr
+        setCardDeck(arr)
     }
 
-    const getDraw = () => {
+    const getDraw = (cards) => {
+
+        console.log(cards)
 
         //Draw count is set to 5 less the number of cards held 
         const drawCount = (5 - held.length)
 
-        //Shuffle cards array
-        const shuffledCards = shuffle(cards)
-
-        //Remove required cards from cards array and set removed cards to drawn, then update cards array
-        let drawn = shuffledCards.splice(0, drawCount)
-        setCards(shuffledCards)
+        //Remove required cards from card deck array and set removed cards to drawn, then update card deck
+        let drawn = cards.splice(0, drawCount)
+        setCardDeck(cards)
 
         //Add held cards to drawn in the correct position
         if (held.length) {
-            held.map(card => drawn.splice(card.positionId, 0, card))
+            held.map(heldCard => drawn.splice(heldCard.positionId, 0, heldCard))
         }
 
         //Assign each drawn card an index positionId
@@ -57,12 +54,15 @@ export const PlayRound = () => {
 
         //Advance round
         setRoundCount(roundCount + 1)
+
+        console.log(cardDeck)
+
     }
 
     //Get cards for selected deck and set to state
     useEffect(() => {
         fetchCards(`?deckId=${deckId}`)
-            .then(cardsArray => setCards(cardsArray))
+            .then(cardsArray => shuffle(cardsArray))
     }, [])
 
     return (
@@ -81,7 +81,7 @@ export const PlayRound = () => {
                 <section className="is-flex is-justify-content-center">
                     <button
                         className="button mt-1"
-                        onClick={getDraw}>
+                        onClick={() => getDraw(cardDeck)}>
                         Draw
                     </button>
                 </section>
@@ -96,6 +96,6 @@ export const PlayRound = () => {
                 </section>
             </>
             :
-            <Navigate to="/play/result" state={{finalDraw: draw}} />
+            <Navigate to="/play/result" state={{ finalDraw: draw }} />
     )
 }
