@@ -7,11 +7,10 @@ export const GameResult = () => {
     const gameId = useParams().id
     const currentUser = getLocalUser()
     
-    const [gameHistory, setGameHistory] = useState([])
     const [gameResult, setGameResult] = useState([])
 
     //Find card that matches gameId passed in with useParams and use it to filter array
-    const filterArray = () => {
+    const filterArray = (gameHistory) => {
         const cardGuide = gameHistory.find(card => card.id === parseInt(gameId))
         setGameResult(gameHistory.filter(card => card.timestamp === cardGuide.timestamp))
 
@@ -28,13 +27,9 @@ export const GameResult = () => {
 
     //Get game history from database and set to state.
     useEffect(() => {
-        fetchHistory(`?userId=${currentUser.id}`)
-            .then(historyArray => setGameHistory(historyArray))
+        fetchHistory(`?userId=${currentUser.id}&_expand=card`)
+            .then(historyArray => filterArray(historyArray))
     }, [])
-
-    useEffect(() => {
-        filterArray()
-    }, [gameHistory])
 
     return (
         <section className="columns is-centered is-multiline is-2-tablet mt-5">
