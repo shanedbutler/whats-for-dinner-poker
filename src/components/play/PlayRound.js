@@ -11,8 +11,8 @@ export const PlayRound = () => {
     const location = useLocation()
     const { deckId } = location.state
 
-    const roundsToPlay = 3
-    const [roundCount, setRoundCount] = useState(1)
+    const roundsToPlay = 2
+    const [roundCount, setRoundCount] = useState(0)
 
     const [cards, setCards] = useState([])
 
@@ -42,25 +42,21 @@ export const PlayRound = () => {
         let drawn = shuffledCards.splice(0, drawCount)
         setCards(shuffledCards)
 
+        //Add held cards to drawn in the correct position
+        if (held.length) {
+            held.map(card => drawn.splice(card.positionId, 0, card))
+        }
+
         //Assign each drawn card an index positionId
         for (let i = 0; i < drawn.length; i++) {
             drawn[i].positionId = i
         }
 
-        //Add held cards to drawn in the correct position
-        if (held.length) {
-            held.map(card => drawn.splice(card.positionId, 0, card))
-        }
-        //Set drawn cards to state, drawn is mapped through in component return to render each meal card
+        //Set drawn cards to draw state, draw is mapped through in component return to render each individual play card
         setDraw(drawn)
 
         //Advance round
         setRoundCount(roundCount + 1)
-
-        //     if (roundCount >= roundsToPlay) {
-        //         navigate("/play/result")
-        //     }
-        // }
     }
 
     //Get cards for selected deck and set to state
