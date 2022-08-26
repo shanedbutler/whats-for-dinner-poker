@@ -28,6 +28,12 @@ export const PlayRound = () => {
         setCardDeck(arr)
     }
 
+    //GET cards for selected deck and send to shuffle
+    useEffect(() => {
+        fetchCards(`?deckId=${deckId}`)
+        .then(cardsArray => shuffle(cardsArray))
+    }, [])
+    
     const getDraw = (cards) => {
 
         //Draw count is set to 5 less the number of cards held 
@@ -54,12 +60,6 @@ export const PlayRound = () => {
         //Advance round
         setRoundCount(roundCount + 1)
     }
-
-    //GET cards for selected deck and send to shuffle
-    useEffect(() => {
-        fetchCards(`?deckId=${deckId}`)
-            .then(cardsArray => shuffle(cardsArray))
-    }, [])
 
     return (
         roundCount <= roundsToPlay ?
