@@ -30,12 +30,10 @@ export const PlayRound = () => {
 
     const getDraw = (cards) => {
 
-        console.log(cards)
-
         //Draw count is set to 5 less the number of cards held 
         const drawCount = (5 - held.length)
 
-        //Remove required cards from card deck array and set removed cards to drawn, then update card deck
+        //Remove required cards from card deck and assign removed cards to drawn, then update card deck
         let drawn = cards.splice(0, drawCount)
         setCardDeck(cards)
 
@@ -49,17 +47,15 @@ export const PlayRound = () => {
             drawn[i].positionId = i
         }
 
-        //Set drawn cards to draw state, draw is mapped through in component return to render each individual play card
+        //Set drawn cards to draw state. 
+        //Draw is mapped in component return to render each individual play card.
         setDraw(drawn)
 
         //Advance round
         setRoundCount(roundCount + 1)
-
-        console.log(cardDeck)
-
     }
 
-    //Get cards for selected deck and set to state
+    //GET cards for selected deck and send to shuffle
     useEffect(() => {
         fetchCards(`?deckId=${deckId}`)
             .then(cardsArray => shuffle(cardsArray))
