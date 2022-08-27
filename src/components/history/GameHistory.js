@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { fetchHistory, getLocalUser } from "../../utils/apiUtils"
+import { fetchDecks, fetchHistory, getLocalUser } from "../../utils/apiUtils"
 import { GameItem } from "./GameItem"
 
 export const GameHistory = () => {
@@ -8,6 +8,8 @@ export const GameHistory = () => {
 
     const [gameHistory, setGameHistory] = useState([])
     const [gameList, setGameList] = useState([])
+
+    const [decks, setDecks] = useState([])
 
     //Loop through gameHistory and push every 5th object to new array to make an index of games.
     const makeIndex = (arr) => {
@@ -22,8 +24,13 @@ export const GameHistory = () => {
 
     //Get game history from database and set to state.
     useEffect(() => {
-        fetchHistory(`?userId=${currentUser.id}`)
+        fetchHistory(`?userId=${currentUser.id}&_expand=card`)
             .then(historyArray => setGameHistory(historyArray))
+    }, [])
+
+    useEffect(() => {
+        fetchDecks()
+        .then(decksArray => setDecks(decksArray))
     }, [])
 
     //Copy game history and pass it to fn
@@ -49,7 +56,7 @@ export const GameHistory = () => {
                     Recently Played
                 </p>
                 <ul className="menu-list">
-                    {gameList.map(game => <GameItem key={game.id} game={game} />)}
+                    {gameList.map(game => <GameItem key={game.id} game={game} decks={decks} />)}
                 </ul>
             </aside>
         </>
