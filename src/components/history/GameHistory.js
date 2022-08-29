@@ -15,6 +15,9 @@ export const GameHistory = () => {
         for (let i = 0; i < arr.length; i = i + 5) {
             gameIndex.push(arr[i])
         }
+        
+        //Reverse for display in descending order and set to state
+        gameIndex.reverse()
         setGameList(gameIndex)
     }
 
