@@ -2,3 +2,12 @@
     width: 150px;
     height: 225px;
 }
+
+.card-name {
+    height: 140px;
+}
+
+.card-back {
+    width: 237px;
+    height: 340px;
+}
