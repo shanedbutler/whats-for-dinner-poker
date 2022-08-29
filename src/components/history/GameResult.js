@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { fetchHistory, getLocalUser } from "../../utils/apiUtils"
 import { GameCard } from "./GameCard"
 
@@ -21,6 +21,14 @@ export const GameResult = () => {
             .then(historyArray => filterArray(historyArray))
     }, [])
 
+    //Map name property of each history object, add line breaks, convert to string and copy to clipboard
+    const clipboardResults = () => {
+        const nameArray = gameResult.map(historyObj => historyObj.card.name)
+        const listArray  = nameArray.join('\r\n')
+        const textList = listArray.toString()
+        navigator.clipboard.writeText(textList)
+    }
+
     return (
         <>
             <section className="hero is-small is-link">
@@ -41,6 +49,18 @@ export const GameResult = () => {
                 }
                 <div className="column">
                 </div>
+            </section>
+            <section className="is-flex is-justify-content-center">
+                <Link to="/history">
+                    <button className="button mt-1 mr-5">
+                        Back to Index
+                    </button>
+                </Link>
+                <button
+                    className="button mt-1 mr-5"
+                    onClick={clipboardResults}>
+                    Copy to Clipboard
+                </button>
             </section>
         </>
     )
