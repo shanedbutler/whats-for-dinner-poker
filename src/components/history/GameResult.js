@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
-import { fetchHistory, getLocalUser } from "../../utils/apiUtils"
+import { fetchHistory } from "../../utils/apiUtils"
+import { getLocalUser } from "../../utils/utils"
 import { GameCard } from "./GameCard"
 
 export const GameResult = () => {

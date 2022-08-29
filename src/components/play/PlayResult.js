@@ -1,5 +1,6 @@
-import { Link, useLocation, useNavigate } from "react-router-dom"
-import { fetchHistory, getLocalUser, postOption } from "../../utils/apiUtils"
+import { Link, useLocation } from "react-router-dom"
+import { fetchHistory, postOption } from "../../utils/apiUtils"
+import { getLocalUser } from "../../utils/utils"
 import { ResultCard } from "./ResultCard"
 
 export const PlayResult = () => {
@@ -27,8 +28,13 @@ export const PlayResult = () => {
         Promise.all(gameResult.map(historyCard => fetchHistory("", postOption(historyCard))))
     }
 
-    const navigate = useNavigate()
-    const navSelectDeck = () => navigate("/play")
+    //Map name property of each history object, add line breaks, convert to string and copy to clipboard
+    const clipboardResults = () => {
+        const nameArray = finalDraw.map(card => card.name)
+        const listArray = nameArray.join('\r\n')
+        const textList = listArray.toString()
+        navigator.clipboard.writeText(textList)
+    }
 
     return (
         <>
@@ -67,8 +73,8 @@ export const PlayResult = () => {
                 </button>
                 <button
                     className="button mt-1"
-                    onClick={navSelectDeck}>
-                    Select Deck
+                    onClick={clipboardResults}>
+                    Copy to Clipboard
                 </button>
             </section>
         </>
