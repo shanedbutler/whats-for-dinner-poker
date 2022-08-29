@@ -9,34 +9,30 @@ export const GameResult = () => {
     
     const [gameResult, setGameResult] = useState([])
 
-    //Find card that matches gameId passed in with useParams and use it to filter array
+    //Find history object that matches gameId passed in with useParams and use it to filter array
     const filterArray = (gameHistory) => {
-        const cardGuide = gameHistory.find(card => card.id === parseInt(gameId))
-        setGameResult(gameHistory.filter(card => card.timestamp === cardGuide.timestamp))
-
-        // for (let i = (gameId); i <= (gameId + 5); i++) {
-        //     gameResult.push(gameHistory[i])
-        // }
-    }
-
-    const mapArray = () => {
-        gameResult.map(card => {
-            return <ResultCard key={card.id} card={card} />
-        })
+        const foundObj = gameHistory.find(historyObj => historyObj.id === parseInt(gameId))
+        setGameResult(gameHistory.filter(historyObj => historyObj.timestamp === foundObj.timestamp))
     }
 
     //Get game history from database and set to state.
     useEffect(() => {
         fetchHistory(`?userId=${currentUser.id}&_expand=card`)
-            .then(historyArray => filterArray(historyArray))
+        .then(historyArray => filterArray(historyArray))
     }, [])
+
+    const mapResults = () => {
+        gameResult.map(historyObj => {
+            return <ResultCard key={historyObj.id} historyObj={historyObj} />
+        })
+    }
 
     return (
         <section className="columns is-centered is-multiline is-2-tablet mt-5">
             <div className="column">
             </div>
             {
-                mapArray()
+                mapResults()
             }
             <div className="column">
             </div>
