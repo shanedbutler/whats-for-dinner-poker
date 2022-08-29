@@ -1,4 +1,4 @@
-export const ResultCard = (props) => {
+export const GameCard = (props) => {
 
     return (
         <div className="column">
