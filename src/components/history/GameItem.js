@@ -7,7 +7,7 @@ export const GameItem = (props) => {
 
     return (
         <Link to={`/history/${props.game.id}`}>
-            <li>{gameDate}</li>
+            <li>{props.gameDeck?.name} - {gameDate}</li>
         </Link>
     )
 }
