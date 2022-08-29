@@ -8,23 +8,22 @@ export const PlayResult = () => {
     const location = useLocation()
     const { finalDraw } = location.state
 
-    //Initialize array to be sent to database
-    const gameResult = []
-
-    //Set object data for storage and add to array
-    finalDraw.forEach(card => {
-
-        const cardObject = {
-            cardId: card.id,
-            positionId: card.positionId,
-            timestamp: Date.now(),
-            userId: getLocalUser().id
-        }
-        gameResult.push(cardObject)
-
-    })
-
     const postResults = () => {
+
+        //Build object data for storage and add to array
+        const gameResult = []
+        finalDraw.forEach(card => {
+
+            const cardObject = {
+                cardId: card.id,
+                positionId: card.positionId,
+                timestamp: Date.now(),
+                userId: getLocalUser().id
+            }
+            gameResult.push(cardObject)
+        })
+
+        //POST each cardObject from array to database
         Promise.all(gameResult.map(historyCard => fetchHistory("", postOption(historyCard))))
     }
 
@@ -62,17 +61,17 @@ export const PlayResult = () => {
             </section>
             <section className="is-flex is-justify-content-center">
                 <Link to="/play/round" state={{ deckId: finalDraw[0].deckId }}>
-                    <button className="button mt-1 mr-5">
+                    <button className="button mt-3 mr-5">
                         Play Again
                     </button>
                 </Link>
                 <button
-                    className="button mt-1 mr-5"
+                    className="button mt-3 mr-5"
                     onClick={postResults}>
                     Save Game
                 </button>
                 <button
-                    className="button mt-1"
+                    className="button mt-3"
                     onClick={clipboardResults}>
                     Copy to Clipboard
                 </button>
