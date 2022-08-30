@@ -1,29 +1,12 @@
 import { useEffect, useState } from "react"
 import "./Play.css"
+import { ResultCard } from "./ResultCard"
 
 export const PlayCard = (props) => {
 
     const [isHeld, setIsHeld] = useState(false)
     const toggleHold = () => {
         setIsHeld(!isHeld)
-    }
-
-    let suitIcon = ""
-    switch (props.card.suit.name) {
-        case 'Spades':
-            suitIcon = "♠️"
-            break
-        case 'Hearts':
-            suitIcon = "♥️"
-            break
-        case 'Diamonds':
-            suitIcon = "♦️"
-            break
-        case 'Clubs':
-            suitIcon = "♣"
-            break
-        default:
-            suitIcon = "X"
     }
 
     useEffect(() => {
@@ -47,25 +30,8 @@ export const PlayCard = (props) => {
     }, [isHeld])
 
     return (
-
-        <div className="column">
-            <div className="card meal-card has-background-light" >
-                <div className="card-content">
-                    <span className="icon">
-                        {suitIcon}
-                    </span>
-                    <div className="is-flex is-justify-content-center is-align-items-center card-name">
-                        <p>
-                            {props.card.name}
-                        </p>
-                    </div>
-                    <div className="is-flex is-justify-content-right">
-                        <span className="icon">
-                            {suitIcon}
-                        </span>
-                    </div>
-                </div>
-            </div>
+        <section className="is-flex is-flex-direction-column">
+            <ResultCard key={props.card.id} card={props.card} />
             <section className="is-flex is-justify-content-center">
                 {
                     isHeld ?
@@ -82,6 +48,6 @@ export const PlayCard = (props) => {
                         </button>
                 }
             </section>
-        </div>
+        </section>
     )
 }
