@@ -16,50 +16,87 @@ export const PlayRound = () => {
     const [roundCount, setRoundCount] = useState(0)
 
     const [cardDeck, setCardDeck] = useState([])
-    const [draw, setDraw] = useState([])
-    const [held, setHeld] = useState([])
+    const [handCards, setHandCards] = useState([])
 
-    //Fisher–Yates shuffle and set to state
-    const shuffle = (arr) => {
+
+    //Fisher–Yates shuffle, add held property, set to state
+    const prep = (arr) => {
         let i = arr.length
         while (--i > 0) {
             let randIndex = Math.floor(Math.random() * (i + 1));
             [arr[randIndex], arr[i]] = [arr[i], arr[randIndex]];
         }
+        arr.forEach(card => card.isHeld = false)
         setCardDeck(arr)
     }
 
     //GET cards for selected deck and send to shuffle
     useEffect(() => {
         fetchCards(`?deckId=${deckId}&_expand=suit`)
-            .then(cardsArray => shuffle(cardsArray))
+            .then(cardsArray => prep(cardsArray))
     }, [])
 
-    const getDraw = (cards) => {
+    const playGame = (cards) => {
 
         //Draw count is set to 5 less the number of cards held 
-        const drawCount = (5 - held.length)
+        const heldCards = handCards.filter(card => card.isHeld)
+        const drawCount = 5 - heldCards.length
 
-        //Remove required cards from card deck and assign removed cards to drawn, then update card deck
-        let drawn = cards.splice(0, drawCount)
-        setCardDeck(cards)
+        //Remove required cards from card deck and assign removed cards to drawnCards, then update card deck
+        let drawnCards = cards.splice(-drawCount)
+        // ["Chili", "Lentil Soup", "Coq Au Vin"]
 
-        //Add held cards to drawn in the correct position
-        if (held.length) {
-            held.map(heldCard => drawn.splice(heldCard.positionId, 0, heldCard))
+        //Insert drawnCards to heldCards in the correct position
+        let updatedHand = handCards
+        if (heldCards.length) {
+
+            let indexesToReplace = handCards.map((card, i) => {
+                if (!card.isHeld) {
+                    return i
+                }
+            })
+
+            // Filter to fix the undefined objects from array
+            indexesToReplace = indexesToReplace.filter(value => {
+                return value !== undefined
+            })
+
+            indexesToReplace.forEach((index, jdex) => {
+                updatedHand[index] = drawnCards[jdex]
+            })
+
+            setHandCards(updatedHand)
+
         }
 
-        //Assign each drawn card an index positionId
-        for (let i = 0; i < drawn.length; i++) {
-            drawn[i].positionId = i
+        else {
+            console.log(drawnCards)
+            setHandCards(drawnCards)
         }
+
+        // //Assign each drawn card an index positionId
+        // for (let i = 0; i < drawnCards.length; i++) {
+        //     drawnCards[i].positionId = i
+        // }
 
         //Set drawn cards to draw state. 
         //Draw is mapped in component return to render each individual play card.
-        setDraw(drawn)
+        // setHandCards(updatedHand)
 
         //Advance round
         setRoundCount(roundCount + 1)
+    }
+    
+    //Toggle isHeld property and set to state
+    const toggleHandHeld = (id) => {
+
+        const handCardsCopy = handCards
+
+        const indexOfCardToToggle = handCardsCopy.findIndex(card => card.id === id)
+        const cardToToggle = handCardsCopy[indexOfCardToToggle]
+        cardToToggle.isHeld = !cardToToggle.isHeld
+
+        setHandCards(handCardsCopy)
     }
 
     return (
@@ -87,7 +124,7 @@ export const PlayRound = () => {
                                     <img className="meal-card" src={cardBackPink}></img>
                             }
                         </div>
-                        : draw.map(card => <PlayCard key={card.id} card={card} held={held} setHeld={setHeld} />)
+                        : handCards.map((card, i) => card && <PlayCard key={card.id} card={card} toggleHandHeld={toggleHandHeld} />)
                     }
                     <div className="column">
                     </div>
@@ -95,12 +132,12 @@ export const PlayRound = () => {
                 <section className="is-flex is-justify-content-center">
                     <button
                         className="button mt-3"
-                        onClick={() => getDraw(cardDeck)}>
+                        onClick={() => playGame(cardDeck)}>
                         Draw
                     </button>
                 </section>
             </>
             :
-            <Navigate to="/play/result" state={{ finalDraw: draw }} />
+            <Navigate to="/play/result" state={{ finalDraw: handCards }} />
     )
 }
