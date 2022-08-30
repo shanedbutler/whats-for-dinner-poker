@@ -1,8 +1,15 @@
 .footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   bottom: 0;
+  height: 100px;
   width: 100%;
-  margin-bottom: -3rem;
+  margin-bottom: -1.1rem;
+}
+
+@media (max-width: 768px), (max-height: 768px) {
+  .footer {
+    display: none;
+  }
 }
