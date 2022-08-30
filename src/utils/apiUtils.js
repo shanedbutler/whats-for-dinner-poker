@@ -61,7 +61,3 @@ export const putOption = (bodyContent) => {
     }
     return deleteOpt
   }
-
-export const getLocalUser = () => {
-    return {...JSON.parse(localStorage.getItem("dinnerPokerUser"))}
-  }

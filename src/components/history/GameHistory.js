@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import { fetchDecks, fetchHistory, getLocalUser } from "../../utils/apiUtils"
+import { fetchDecks, fetchHistory } from "../../utils/apiUtils"
+import { getLocalUser } from "../../utils/utils"
 import { GameItem } from "./GameItem"
 
 export const GameHistory = () => {
