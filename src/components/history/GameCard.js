@@ -1,15 +1,41 @@
-export const GameCard = (props) => {
+export const GameCard = ({ card, suits }) => {
+
+    let suitIcon = ""
+    const suit = suits.find(suit => suit.id === card.suitId)
+    switch (suit?.name) {
+        case 'Spades':
+            suitIcon = "♠️"
+            break
+        case 'Hearts':
+            suitIcon = "♥️"
+            break
+        case 'Diamonds':
+            suitIcon = "♦️"
+            break
+        case 'Clubs':
+            suitIcon = "♣"
+            break
+        default:
+            suitIcon = "X"
+    }
 
     return (
         <div className="column">
-            <div className="card meal-card">
+            <div className="card meal-card has-background-light">
                 <div className="card-content">
                     <span className="icon">
-                        <i className="fas fa-heart"></i>
+                        {suitIcon}
                     </span>
-                    <p>
-                        {props.historyObj.card.name}
-                    </p>
+                    <div className="is-flex is-justify-content-center is-align-items-center card-name">
+                        <p>
+                            {card.name}
+                        </p>
+                    </div>
+                    <div className="is-flex is-justify-content-right">
+                        <span className="icon">
+                            {suitIcon}
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
-import { fetchHistory } from "../../utils/apiUtils"
+import { fetchHistory, fetchSuits } from "../../utils/apiUtils"
 import { getLocalUser } from "../../utils/utils"
 import { GameCard } from "./GameCard"
 
@@ -9,6 +9,7 @@ export const GameResult = () => {
     const currentUser = getLocalUser()
 
     const [gameResult, setGameResult] = useState([])
+    const [suits, setSuits] = useState([])
 
     //Find history object that matches gameId passed in with useParams and use it to filter array
     const filterArray = (gameHistory) => {
@@ -20,6 +21,11 @@ export const GameResult = () => {
     useEffect(() => {
         fetchHistory(`?userId=${currentUser.id}&_expand=card`)
             .then(historyArray => filterArray(historyArray))
+    }, [])
+
+    useEffect(() => {
+        fetchSuits()
+            .then(suitArray => setSuits(suitArray))
     }, [])
 
     //Map name property of each history object, add line breaks, convert to string and copy to clipboard
@@ -46,19 +52,19 @@ export const GameResult = () => {
                 <div className="column">
                 </div>
                 {
-                    gameResult.map(historyObj => <GameCard key={historyObj.id} historyObj={historyObj} />)
+                    gameResult.map(historyObj => <GameCard key={historyObj.id} card={historyObj.card} suits={suits} />)
                 }
                 <div className="column">
                 </div>
             </section>
             <section className="is-flex is-justify-content-center">
                 <Link to="/history">
-                    <button className="button mt-1 mr-5">
+                    <button className="button mt-3 mr-5">
                         Back to Index
                     </button>
                 </Link>
                 <button
-                    className="button mt-1 mr-5"
+                    className="button mt-3 mr-5"
                     onClick={clipboardResults}>
                     Copy to Clipboard
                 </button>
