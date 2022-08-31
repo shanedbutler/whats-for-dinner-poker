@@ -12,11 +12,11 @@ export const PlayResult = () => {
 
         //Build object data for storage and add to array
         const gameResult = []
-        finalDraw.forEach(card => {
+        finalDraw.forEach((card, i) => {
 
             const cardObject = {
                 cardId: card.id,
-                positionId: card.positionId,
+                positionId: i,
                 timestamp: Date.now(),
                 userId: getLocalUser().id
             }
