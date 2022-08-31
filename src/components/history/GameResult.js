@@ -11,10 +11,16 @@ export const GameResult = () => {
     const [gameResult, setGameResult] = useState([])
     const [suits, setSuits] = useState([])
 
+    //Sort array by each object's positionId property for display in original result order
+    const sortArray = (gameHistory) => {
+        gameHistory.sort((a, b) => a.positionId - b.positionId)
+        setGameResult(gameHistory)
+    }
+
     //Find history object that matches gameId passed in with useParams and use it to filter array
     const filterArray = (gameHistory) => {
         const foundObj = gameHistory.find(historyObj => historyObj.id === parseInt(gameId))
-        setGameResult(gameHistory.filter(historyObj => historyObj.timestamp === foundObj.timestamp))
+        sortArray(gameHistory.filter(historyObj => historyObj.timestamp === foundObj.timestamp))
     }
 
     //Get game history from database and set to state.
