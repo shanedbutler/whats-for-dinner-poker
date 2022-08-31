@@ -39,7 +39,7 @@ export const GameResult = () => {
 
     const clipboardResults = (e) => {
         e.preventDefault()
-        
+
         //Map name property of each history object, add line breaks, convert to string and copy to clipboard
         const nameArray = gameResult.map(historyObj => historyObj.card.name)
         const listArray = nameArray.join('\r\n')
@@ -76,11 +76,11 @@ export const GameResult = () => {
             <section className="is-flex is-justify-content-center">
                 <Link to="/history">
                     <button className="button m-2 mr-1 mb-3">
-                        Back to Index
+                        Back to List
                     </button>
                 </Link>
                 <button
-                    className={`${!isCopied ? "" : "is-link is-outlined"} button m-2 mb-3`}
+                    className={`${!isCopied ? "" : "is-primary is-outlined"} button m-2 mb-3`}
                     onClick={(e) => clipboardResults(e)}>
                     {!isCopied ? "" :
                         <span className="icon is-small">
