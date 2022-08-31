@@ -12,7 +12,7 @@ export const PlayRound = () => {
     const location = useLocation()
     const { deckId } = location.state
 
-    const roundsToPlay = 2
+    const roundsToPlay = 3
     const [roundCount, setRoundCount] = useState(0)
 
     const [cardDeck, setCardDeck] = useState([])
@@ -42,47 +42,37 @@ export const PlayRound = () => {
         const heldCards = handCards.filter(card => card.isHeld)
         const drawCount = 5 - heldCards.length
 
-        //Remove required cards from card deck and assign removed cards to drawnCards, then update card deck
+        //Remove (draw) required cards from card deck and assign to drawnCards
         let drawnCards = cards.splice(-drawCount)
-        // ["Chili", "Lentil Soup", "Coq Au Vin"]
 
-        //Insert drawnCards to heldCards in the correct position
+        //Insert drawnCards to heldCards in the correct position if any heldCards exist
         let updatedHand = handCards
         if (heldCards.length) {
 
+            //Find index values of handCards that are to be replaced
             let indexesToReplace = handCards.map((card, i) => {
                 if (!card.isHeld) {
                     return i
                 }
             })
-
-            // Filter to fix the undefined objects from array
+            //Filter to remove the undefined objects from the resulting array
             indexesToReplace = indexesToReplace.filter(value => {
                 return value !== undefined
             })
-
+            //Add the drawn cards at each index to replace
             indexesToReplace.forEach((index, jdex) => {
                 updatedHand[index] = drawnCards[jdex]
             })
-
+            //Set state to round's hand of cards to be displayed
             setHandCards(updatedHand)
 
+            //Update state with array minus removed cards
+            setCardDeck(cards)
         }
-
         else {
             console.log(drawnCards)
             setHandCards(drawnCards)
         }
-
-        // //Assign each drawn card an index positionId
-        // for (let i = 0; i < drawnCards.length; i++) {
-        //     drawnCards[i].positionId = i
-        // }
-
-        //Set drawn cards to draw state. 
-        //Draw is mapped in component return to render each individual play card.
-        // setHandCards(updatedHand)
-
         //Advance round
         setRoundCount(roundCount + 1)
     }
@@ -90,12 +80,14 @@ export const PlayRound = () => {
     //Toggle isHeld property and set to state
     const toggleHandHeld = (id) => {
 
+        //Copy hand state
         const handCardsCopy = handCards
 
-        const indexOfCardToToggle = handCardsCopy.findIndex(card => card.id === id)
-        const cardToToggle = handCardsCopy[indexOfCardToToggle]
+        //Find card and toggle boolean property
+        const cardToToggle = handCardsCopy.find(card => card.id === id)
         cardToToggle.isHeld = !cardToToggle.isHeld
 
+        //Set state
         setHandCards(handCardsCopy)
     }
 
@@ -108,7 +100,7 @@ export const PlayRound = () => {
                             Play
                         </p>
                         <p className="subtitle">
-                            {roundCount < 1 ? 'Draw to begin' : `Round ${roundCount}`}
+                            {roundCount < 1 ? 'Draw to begin' : `Round ${roundCount} / ${roundsToPlay}`}
                         </p>
                     </div>
                 </section>
