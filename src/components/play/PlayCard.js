@@ -7,7 +7,9 @@ export const PlayCard = ({ card, toggleHandHeld }) => {
     const [isHeldButton, setIsHeldButton] = useState(card.isHeld)
     
     const toggleHold = () => {
+        //Toggle state of is held button.
         setIsHeldButton(!isHeldButton)
+        //Callback function (prop) to add isHeld property to held card in parent component
         toggleHandHeld(id)
     }
 
