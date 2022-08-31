@@ -4,39 +4,58 @@ import { getLocalUser } from "../../utils/utils"
 import { ResultCard } from "./ResultCard"
 import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
+import { useState } from "react"
 
 export const PlayResult = () => {
 
     const location = useLocation()
     const { finalDraw } = location.state
 
+    const [isSaved, setIsSaved] = useState(false)
+    const [isCopied, setIsCopied] = useState(false)
+
     const { width, height } = useWindowSize()
 
-    const postResults = () => {
+    const postResults = (e) => {
+        e.preventDefault()
 
-        //Build object data for storage and add to array
-        const gameResult = []
-        finalDraw.forEach((card, i) => {
+        if (isSaved === false) {
 
-            const cardObject = {
-                cardId: card.id,
-                positionId: i,
-                timestamp: Date.now(),
-                userId: getLocalUser().id
-            }
-            gameResult.push(cardObject)
-        })
+            //Build object data for storage and add to array
+            const gameResult = []
+            finalDraw.forEach((card, i) => {
+                const cardObject = {
+                    cardId: card.id,
+                    positionId: i,
+                    timestamp: Date.now(),
+                    userId: getLocalUser().id
+                }
+                gameResult.push(cardObject)
+            })
 
-        //POST each cardObject from array to database
-        Promise.all(gameResult.map(historyCard => fetchHistory("", postOption(historyCard))))
+            //POST each cardObject from array to database
+            Promise.all(gameResult.map(historyCard => fetchHistory("", postOption(historyCard))))
+
+            //Toggle state
+            setIsSaved(!isSaved)
+        }
     }
 
-    //Map name property of each history object, add line breaks, convert to string and copy to clipboard
-    const clipboardResults = () => {
+
+    const clipboardResults = (e) => {
+        e.preventDefault()
+
+        //Map name property of each history object, add line breaks, convert to string, and copy to clipboard
         const nameArray = finalDraw.map(card => card.name)
         const listArray = nameArray.join('\r\n')
         const textList = listArray.toString()
         navigator.clipboard.writeText(textList)
+
+        //Toggle state
+        if (isCopied === false) {
+            setIsCopied(!isCopied)
+        }
+
     }
 
     return (
@@ -65,19 +84,29 @@ export const PlayResult = () => {
             </section>
             <section className="is-flex is-justify-content-center">
                 <Link to="/play/round" state={{ deckId: finalDraw[0].deckId }}>
-                    <button className="button mt-3 mr-5">
+                    <button className="button m-2 mr-1 mb-3">
                         Play Again
                     </button>
                 </Link>
                 <button
-                    className="button mt-3 mr-5"
-                    onClick={postResults}>
-                    Save Game
+                    className={`${!isSaved ? "" : "is-link is-outlined"} button m-2 mr-1 mb-3`}
+                    onClick={(e) => postResults(e)}>
+                    {!isSaved ? "" :
+                        <span className="icon is-small">
+                            <i className="fas fa-check"></i>
+                        </span>
+                    }
+                    <span>{!isSaved ? "Save" : "Saved"}</span>
                 </button>
                 <button
-                    className="button mt-3"
-                    onClick={clipboardResults}>
-                    Copy to Clipboard
+                    className={`${!isCopied ? "" : "is-link is-outlined"} button m-2 mb-3`}
+                    onClick={(e) => clipboardResults(e)}>
+                    {!isCopied ? "" :
+                        <span className="icon is-small">
+                            <i className="fas fa-check"></i>
+                        </span>
+                    }
+                    <span>{!isCopied ? "Clipboard" : "Copied"}</span>
                 </button>
             </section>
             <Confetti

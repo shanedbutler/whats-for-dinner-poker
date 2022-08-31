@@ -11,6 +11,9 @@ export const GameResult = () => {
     const [gameResult, setGameResult] = useState([])
     const [suits, setSuits] = useState([])
 
+    const [isCopied, setIsCopied] = useState(false)
+
+
     //Sort array by each object's positionId property for display in original result order
     const sortArray = (gameHistory) => {
         gameHistory.sort((a, b) => a.positionId - b.positionId)
@@ -34,12 +37,19 @@ export const GameResult = () => {
             .then(suitArray => setSuits(suitArray))
     }, [])
 
-    //Map name property of each history object, add line breaks, convert to string and copy to clipboard
-    const clipboardResults = () => {
+    const clipboardResults = (e) => {
+        e.preventDefault()
+        
+        //Map name property of each history object, add line breaks, convert to string and copy to clipboard
         const nameArray = gameResult.map(historyObj => historyObj.card.name)
-        const listArray  = nameArray.join('\r\n')
+        const listArray = nameArray.join('\r\n')
         const textList = listArray.toString()
         navigator.clipboard.writeText(textList)
+
+        //Toggle state
+        if (isCopied === false) {
+            setIsCopied(!isCopied)
+        }
     }
 
     return (
@@ -65,14 +75,19 @@ export const GameResult = () => {
             </section>
             <section className="is-flex is-justify-content-center">
                 <Link to="/history">
-                    <button className="button mt-3 mr-5">
+                    <button className="button m-2 mr-1 mb-3">
                         Back to Index
                     </button>
                 </Link>
                 <button
-                    className="button mt-3 mr-5"
-                    onClick={clipboardResults}>
-                    Copy to Clipboard
+                    className={`${!isCopied ? "" : "is-link is-outlined"} button m-2 mb-3`}
+                    onClick={(e) => clipboardResults(e)}>
+                    {!isCopied ? "" :
+                        <span className="icon is-small">
+                            <i className="fas fa-check"></i>
+                        </span>
+                    }
+                    <span>{!isCopied ? "Clipboard" : "Copied"}</span>
                 </button>
             </section>
         </>
