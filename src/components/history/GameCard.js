@@ -1,5 +1,4 @@
 export const GameCard = ({ card, suits }) => {
-
     let suitIcon = ""
     const suit = suits.find(suit => suit.id === card.suitId)
     switch (suit?.name) {
@@ -23,7 +22,7 @@ export const GameCard = ({ card, suits }) => {
         <div className="column">
             <div className="card meal-card has-background-light">
                 <div className="card-content">
-                    <span className="icon">
+                    <span className="icon has-tooltip-primary" data-tooltip={suit?.description}>
                         {suitIcon}
                     </span>
                     <div className="is-flex is-justify-content-center is-align-items-center card-name">
@@ -32,7 +31,7 @@ export const GameCard = ({ card, suits }) => {
                         </p>
                     </div>
                     <div className="is-flex is-justify-content-right">
-                        <span className="icon">
+                        <span className="icon has-tooltip-primary" data-tooltip={suit?.description}>
                             {suitIcon}
                         </span>
                     </div>

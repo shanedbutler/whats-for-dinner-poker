@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Noto+Serif&display=swap');
 
 //Import Bulma's variables
-@import "../../mybulma/sass/utilities/initial-variables.sass";
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
 
 // Set WfDP theme colors
 $green-light: #C3E54A;
@@ -42,16 +42,5 @@ $navbar-breakpoint: $tablet;
 //The rest of Bulma
 @import "../../node_modules/bulma/bulma.sass";
 
-// Import only what you need from Bulma (local)
-// @import "../../mybulma/sass/base/_all.sass";
-// @import "../../mybulma/sass/utilities/_all.sass";
-// @import "../../mybulma/sass/elements/button.sass";
-// @import "../../mybulma/sass/elements/container.sass";
-// @import "../../mybulma/sass/elements/title.sass";
-// @import "../../mybulma/sass/form/_all.sass";
-// @import "../../mybulma/sass/components/navbar.sass";
-// @import "../../mybulma/sass/layout/hero.sass";
-// @import "../../mybulma/sass/layout/section.sass";
-
-//The rest of Bulma
-// @import "../../mybulma/bulma.sass";
+//Bulma-Tooltip
+@import "../../node_modules/bulma-tooltip/src/sass/index.sass";

@@ -1,7 +1,7 @@
-export const ResultCard = (props) => {
+export const ResultCard = ( {card} ) => {
 
     let suitIcon = ""
-    switch (props.card.suit.name) {
+    switch (card.suit.name) {
         case 'Spades':
             suitIcon = "♠️"
             break
@@ -22,16 +22,16 @@ export const ResultCard = (props) => {
         <div className="column">
             <div className="card meal-card has-background-light">
                 <div className="card-content">
-                    <span className="icon">
+                    <span className="icon has-tooltip-link" data-tooltip={card.suit.description}>
                         {suitIcon}
                     </span>
                     <div className="is-flex is-justify-content-center is-align-items-center card-name">
                         <p>
-                            {props.card.name}
+                            {card.name}
                         </p>
                     </div>
                     <div className="is-flex is-justify-content-right">
-                        <span className="icon">
+                        <span className="icon has-tooltip-link" data-tooltip={card.suit.description}>
                             {suitIcon}
                         </span>
                     </div>
