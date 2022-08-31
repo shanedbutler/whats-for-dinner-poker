@@ -50,15 +50,13 @@ export const PlayRound = () => {
         if (heldCards.length) {
 
             //Find index values of handCards that are to be replaced
-            let indexesToReplace = handCards.map((card, i) => {
+            let indexesToReplace = []
+            handCards.forEach((card, i) => {
                 if (!card.isHeld) {
-                    return i
+                    indexesToReplace.push(i)
                 }
             })
-            //Filter to remove the undefined objects from the resulting array
-            indexesToReplace = indexesToReplace.filter(value => {
-                return value !== undefined
-            })
+
             //Add the drawn cards at each index to replace
             indexesToReplace.forEach((index, jdex) => {
                 updatedHand[index] = drawnCards[jdex]
@@ -70,7 +68,6 @@ export const PlayRound = () => {
             setCardDeck(cards)
         }
         else {
-            console.log(drawnCards)
             setHandCards(drawnCards)
         }
         //Advance round
