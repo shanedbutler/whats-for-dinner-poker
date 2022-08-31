@@ -231,6 +231,36 @@
       "timestamp": 1661796139169,
       "userId": 1,
       "id": 30
+    },
+    {
+      "cardId": 11,
+      "timestamp": 1661952766758,
+      "userId": 1,
+      "id": 31
+    },
+    {
+      "cardId": 59,
+      "timestamp": 1661952766758,
+      "userId": 1,
+      "id": 32
+    },
+    {
+      "cardId": 87,
+      "timestamp": 1661952766758,
+      "userId": 1,
+      "id": 33
+    },
+    {
+      "cardId": 10,
+      "timestamp": 1661952766758,
+      "userId": 1,
+      "id": 34
+    },
+    {
+      "cardId": 71,
+      "timestamp": 1661952766758,
+      "userId": 1,
+      "id": 35
     }
   ],
   "suits": [
@@ -260,265 +290,701 @@
       "id": 1,
       "name": "Tomato Pie",
       "deckId": 1,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": true
     },
     {
       "id": 2,
       "name": "Potato Salad",
       "deckId": 1,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": true
     },
     {
       "id": 3,
       "name": "Cucumber Salad",
       "deckId": 1,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
     },
     {
       "id": 4,
       "name": "Pasta Fagioli",
       "deckId": 2,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": true
     },
     {
       "id": 5,
       "name": "Japanese Curry",
       "deckId": 2,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": true
     },
     {
       "id": 6,
       "name": "Purloo",
       "deckId": 1,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": true
     },
     {
       "id": 7,
       "name": "Spaghetti",
       "deckId": 1,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": true
     },
     {
       "id": 8,
       "name": "Chili",
       "deckId": 2,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": true
     },
     {
       "id": 9,
       "name": "Okonomiyaki",
       "deckId": 1,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": true
     },
     {
       "id": 10,
       "name": "Split Pea Soup",
       "deckId": 2,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
     },
     {
       "id": 11,
       "name": "Mapo Tofu",
       "deckId": 2,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
     },
     {
       "id": 12,
       "name": "Cabbage Rolls",
       "deckId": 2,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": true
     },
     {
       "id": 13,
       "name": "Roast Chicken",
       "deckId": 2,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": false
     },
     {
       "id": 14,
-      "name": "Adobo",
+      "name": "Chicken Adobo",
       "deckId": 2,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": false
     },
     {
       "id": 15,
       "name": "Cauliflower Soup",
       "deckId": 2,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": true
     },
     {
       "id": 16,
       "name": "Coq au Vin",
       "deckId": 2,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": false
     },
     {
       "id": 17,
       "name": "Mushroom Bourguignon",
       "deckId": 2,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": true
     },
     {
       "id": 18,
-      "name": "BBQ Chicken",
+      "name": "Barbaque Chicken",
       "deckId": 1,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": false
     },
     {
       "id": 19,
       "name": "Hamburgers",
       "deckId": 1,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": true
     },
     {
       "id": 20,
       "name": "Hard Tacos",
       "deckId": 1,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": true
     },
     {
       "id": 21,
       "name": "Asian Slaw",
       "deckId": 1,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
     },
     {
       "id": 22,
       "name": "Succotash",
       "deckId": 1,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
     },
     {
       "id": 23,
       "name": "Gazpacho",
       "deckId": 1,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
     },
     {
       "id": 24,
       "name": "Polenta",
       "deckId": 2,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": true
     },
     {
       "id": 25,
       "name": "Fried Fish",
       "deckId": 1,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": false
     },
     {
       "id": 26,
       "name": "Chilled Soba",
       "deckId": 1,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": true
     },
     {
       "id": 27,
       "name": "Fresh Spring Rolls",
       "deckId": 1,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": true
     },
     {
       "id": 28,
       "name": "Lentil Soup",
       "deckId": 2,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
     },
     {
       "id": 29,
       "name": "Okra Soup",
       "deckId": 1,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": true
     },
     {
       "id": 30,
       "name": "Ratatouille",
       "deckId": 1,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": true
     },
     {
       "id": 31,
       "name": "Fried Rice",
       "deckId": 1,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": true
     },
     {
       "id": 32,
       "name": "Kung Pao Chicken",
       "deckId": 1,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": false
     },
     {
       "id": 33,
       "name": "Tomato Sandwiches",
       "deckId": 1,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
     },
     {
       "id": 34,
       "name": "Beef and Barley Soup",
       "deckId": 2,
-      "suitId": 4
+      "suitId": 4,
+      "isVegetarian": false
     },
     {
       "id": 35,
-      "name": "Tomato Galette",
+      "name": "Tomato Galete",
       "deckId": 1,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": true
     },
     {
       "id": 36,
       "name": "Sheet Pan Dinner",
       "deckId": 2,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": true
     },
     {
       "id": 37,
       "name": "Borscht",
       "deckId": 2,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
     },
     {
       "id": 38,
       "name": "Hoppin' John",
       "deckId": 2,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": true
     },
     {
       "id": 39,
       "name": "Ramen",
       "deckId": 2,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": true
     },
     {
       "id": 40,
       "name": "Cheese Fondue",
       "deckId": 2,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": true
     },
     {
       "id": 41,
       "name": "Cassoulet",
       "deckId": 2,
-      "suitId": 1
+      "suitId": 1,
+      "isVegetarian": true
     },
     {
       "id": 42,
       "name": "Roast Cauliflower",
       "deckId": 2,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
     },
     {
       "id": 43,
       "name": "Tortellini",
       "deckId": 2,
-      "suitId": 3
+      "suitId": 3,
+      "isVegetarian": true
     },
     {
       "id": 44,
       "name": "Okra and Tomatoes",
       "deckId": 1,
-      "suitId": 2
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 45,
+      "name": "Hot Dogs",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 46,
+      "name": "Tomato Bisque",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 47,
+      "name": "Enchilladas",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true
+    },
+    {
+      "id": 48,
+      "name": "Pozole",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true
+    },
+    {
+      "id": 49,
+      "name": "Keema Curry",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": false
+    },
+    {
+      "id": 50,
+      "name": "Quesadillas",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true
+    },
+    {
+      "id": 51,
+      "name": "Jujeh Kabab",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": false
+    },
+    {
+      "id": 52,
+      "name": "Stir Fry",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 53,
+      "name": "Latkes",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 54,
+      "name": "Hot Pot",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 55,
+      "name": "Lasagna",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 57,
+      "name": "Salmon Cakes",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": false
+    },
+    {
+      "id": 58,
+      "name": "Loobia Polo",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true
+    },
+    {
+      "id": 59,
+      "name": "Gumbo",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 60,
+      "name": "Pizza",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 61,
+      "name": "Aloo Gobi",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true
+    },
+    {
+      "id": 62,
+      "name": "Stuffed Peppers",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 63,
+      "name": "Zucchini Fritters",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true
+    },
+    {
+      "id": 64,
+      "name": "Palak Paneer",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 65,
+      "name": "Pesto Pasta",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 66,
+      "name": "Chili Tofu",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 67,
+      "name": "Italian Wedding Soup",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": false
+    },
+    {
+      "id": 68,
+      "name": "Salmon",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": false
+    },
+    {
+      "id": 69,
+      "name": "Fisherman's Stew",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": false
+    },
+    {
+      "id": 70,
+      "name": "One Pot Couscous",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true
+    },
+    {
+      "id": 71,
+      "name": "Thai Curry",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true
+    },
+    {
+      "id": 72,
+      "name": "Congee",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true
+    },
+    {
+      "id": 73,
+      "name": "Fesenjan",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true
+    },
+    {
+      "id": 74,
+      "name": "Ghormah Sabzi",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true
+    },
+    {
+      "id": 75,
+      "name": "Chana Masala",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 76,
+      "name": "Sushi",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 77,
+      "name": "French Onion Soup",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 78,
+      "name": "Nikujaga",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": false
+    },
+    {
+      "id": 79,
+      "name": "Bibimbap",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 80,
+      "name": "Oyakodon",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true
+    },
+    {
+      "id": 81,
+      "name": "Omurice",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true
+    },
+    {
+      "id": 82,
+      "name": "Japchae",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 83,
+      "name": "Donburi",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 84,
+      "name": "Soba Noodle Soup",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 85,
+      "name": "Chicken Parmigiana",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": false
+    },
+    {
+      "id": 86,
+      "name": "Avgolemono",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": false
+    },
+    {
+      "id": 87,
+      "name": "Ropa Vieja",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": false
+    },
+    {
+      "id": 88,
+      "name": "Pho",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 89,
+      "name": "Biriyani",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true
+    },
+    {
+      "id": 90,
+      "name": "Baked Potato",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true
+    },
+    {
+      "id": 91,
+      "name": "Matzo Ball Soup",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 92,
+      "name": "BLT",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 93,
+      "name": "Clam Linguini",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": false
+    },
+    {
+      "id": 94,
+      "name": "Tian",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true
+    },
+    {
+      "id": 95,
+      "name": "Sauteed Beans",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true
+    },
+    {
+      "id": 96,
+      "name": "Chicken Tagine",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": false
+    },
+    {
+      "id": 97,
+      "name": "Fish Tacos",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": false
+    },
+    {
+      "id": 98,
+      "name": "Foccacia Pizza",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true
+    },
+    {
+      "id": 99,
+      "name": "Salad Nicoise ",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 100,
+      "name": "Mac N Cheese",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true
+    },
+    {
+      "id": 101,
+      "name": "Red Braised Pork",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": false
     }
   ]
 }
