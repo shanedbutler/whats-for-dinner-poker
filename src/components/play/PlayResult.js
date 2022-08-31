@@ -2,11 +2,15 @@ import { Link, useLocation } from "react-router-dom"
 import { fetchHistory, postOption } from "../../utils/apiUtils"
 import { getLocalUser } from "../../utils/utils"
 import { ResultCard } from "./ResultCard"
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 
 export const PlayResult = () => {
 
     const location = useLocation()
     const { finalDraw } = location.state
+
+    const { width, height } = useWindowSize()
 
     const postResults = () => {
 
@@ -76,6 +80,13 @@ export const PlayResult = () => {
                     Copy to Clipboard
                 </button>
             </section>
+            <Confetti
+                width={width}
+                height={height}
+                recycle={false}
+                gravity={.05}
+                opacity={.6}
+            />
         </>
     )
 }
