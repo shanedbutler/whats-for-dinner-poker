@@ -14,7 +14,7 @@ export const AuthNav = () => {
             <nav className="navbar is-size-5" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link className="navbar-item" to="/">
-                        What's for Dinner Poker
+                        <h1>What's for Dinner Poker</h1>
                     </Link>
 
                     <a role="button" aria-label="menu" aria-expanded="false"
