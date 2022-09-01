@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useParams } from "react-router-dom"
 import { fetchHistory, postOption } from "../../utils/apiUtils"
 import { getLocalUser } from "../../utils/utils"
 import { ResultCard } from "./ResultCard"
@@ -10,6 +10,28 @@ export const PlayResult = () => {
 
     const location = useLocation()
     const { finalDraw } = location.state
+
+    //Pass veg string in, and then add it and deck Id as properties that PlayRound expect to be passed in
+    const vegParam = useParams()
+    let deck = {}
+    let wasVeg = null
+
+    console.log(vegParam)
+
+    if (vegParam.veg === "veg") {
+        wasVeg = true
+        deck = {
+            id: finalDraw[0].deckId,
+            vegMode: wasVeg
+        }
+    }
+    else {
+        wasVeg = false
+        deck = {
+            id: finalDraw[0].deckId,
+            vegMode: wasVeg
+        }
+    }
 
     const [isSaved, setIsSaved] = useState(false)
     const [isCopied, setIsCopied] = useState(false)
@@ -28,7 +50,8 @@ export const PlayResult = () => {
                     cardId: card.id,
                     positionId: i,
                     timestamp: Date.now(),
-                    userId: getLocalUser().id
+                    userId: getLocalUser().id,
+                    vegMode: wasVeg
                 }
                 gameResult.push(cardObject)
             })
@@ -83,7 +106,7 @@ export const PlayResult = () => {
                 </div>
             </section>
             <section className="field is-grouped is-flex is-justify-content-center">
-                <Link to="/play/round" state={{ deckId: finalDraw[0].deckId }}>
+                <Link to="/play/round" state={{ deck: deck }}>
                     <button className="button m-2 mr-1 mb-3">
                         Play Again
                     </button>
