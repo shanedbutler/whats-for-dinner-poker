@@ -32,16 +32,16 @@ export const Login = () => {
         <>
             <section className="hero is-small is-primary">
                 <div className="hero-body ml-3">
-                    <p className="title">
-                        Login
+                    <p>
+                        <h2>Login</h2>
                     </p>
                 </div>
             </section>
-            <main className="container is-fluid is-max-desktop columns is-centered mt-5">
+            <section className="container is-fluid is-max-desktop columns is-centered mt-5">
                 <div className="column is-5-tablet is-5-desktop is-4-widescreen box p-5">
-                    <h2 className="is-size-5">
+                    <div className="is-size-5">
                         Player Login
-                    </h2>
+                    </div>
                     <form className="mt-3" onSubmit={handleLogin}>
                         <fieldset className="field">
                             <p className="control has-icons-left">
@@ -72,7 +72,7 @@ export const Login = () => {
                         </fieldset>
                     </form>
                 </div>
-            </main >
+            </section>
             </>
             )
 }

@@ -54,16 +54,16 @@ export const Register = () => {
         <>
             <section className="hero is-small is-link">
                 <div className="hero-body ml-3">
-                    <p className="title">
-                        Sign-Up
+                    <p>
+                        <h2>Sign-Up</h2>
                     </p>
                 </div>
             </section>
-            <main className="container is-fluid is-max-desktop columns is-centered mt-5">
+            <section className="container is-fluid is-max-desktop columns is-centered mt-5">
                 <div className="column is-5-tablet is-5-desktop is-4-widescreen box p-5">
-                    <h2 className="is-size-5">
+                    <div className="is-size-5">
                         Register Player
-                    </h2>
+                    </div>
                     <form className="mt-3" onSubmit={handleRegister}>
                         <fieldset className="field">
                             <p className="control has-icons-left">
@@ -111,7 +111,7 @@ export const Register = () => {
                         </fieldset>
                     </form>
                 </div>
-            </main>
-            </>
-            )
+            </section>
+        </>
+    )
 }

@@ -16,8 +16,8 @@ export const PlayDeck = () => {
         <>
             <section className="hero is-small is-primary">
                 <div className="hero-body ml-3">
-                    <p className="title">
-                        Play
+                    <p>
+                        <h2>Play</h2>
                     </p>
                     <p className="subtitle">
                         Select a deck

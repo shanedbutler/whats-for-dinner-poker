@@ -3,3 +3,7 @@
     max-width: 100%;
     width: auto
 }
+
+h2 {
+    font-size: 1.6rem !important;
+}
