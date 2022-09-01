@@ -82,7 +82,7 @@ export const PlayResult = () => {
                 <div className="column">
                 </div>
             </section>
-            <section className="is-flex is-justify-content-center">
+            <section className="field is-grouped is-flex is-justify-content-center">
                 <Link to="/play/round" state={{ deckId: finalDraw[0].deckId }}>
                     <button className="button m-2 mr-1 mb-3">
                         Play Again

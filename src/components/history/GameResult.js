@@ -73,7 +73,7 @@ export const GameResult = () => {
                 <div className="column">
                 </div>
             </section>
-            <section className="is-flex is-justify-content-center">
+            <section className="field is-grouped is-flex is-justify-content-center">
                 <Link to="/history">
                     <button className="button m-2 mr-1 mb-3">
                         Back to List
