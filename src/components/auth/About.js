@@ -32,14 +32,14 @@ export const About = () => {
                     <p><Link to="/register">Sign-up</Link> for a new account. Users can play the game and track their saved game results.</p>
                     <h3>Support</h3>
                     <p>What's for Dinner Poker is designed and built by <a href="https://github.com/shanedbutler">Shane Butler</a>. The web-application was initially created in the summer of 2022 as a front-end capstone project to the <a href="https://generationwv.org/programs/newforce/">NewForce</a> coding school. The app was built with React, Bulma, and SCSS. All source files are available on GitHub. To support Shane, please star the project or follow him on GitHub. Thank you and bon appetit!</p>
-                    <p>
+                    <div>
                         <div className="mr-1">
                             <GitHubButton href="https://github.com/shanedbutler/whats-for-dinner-poker" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star shanedbutler/whats-for-dinner-poker on GitHub">Star</GitHubButton>
                         </div>
                         <div>
                             <GitHubButton href="https://github.com/shanedbutler" data-size="large" data-show-count="true" aria-label="Follow @shanedbutler on GitHub">Follow @shanedbutler</GitHubButton>
                         </div>
-                    </p>
+                    </div>
                 </article>
                 <div className="column is-narrow m-5">
                 </div>
