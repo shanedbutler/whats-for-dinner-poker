@@ -21,271 +21,8 @@
       "name": "Winter"
     }
   ],
-  "gameHistory": [
-    {
-      "cardId": 18,
-      "positionId": 0,
-      "timestamp": 1661780398179,
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "cardId": 9,
-      "positionId": 1,
-      "timestamp": 1661780398179,
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "cardId": 31,
-      "positionId": 2,
-      "timestamp": 1661780398179,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "cardId": 21,
-      "positionId": 3,
-      "timestamp": 1661780398179,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "cardId": 25,
-      "positionId": 4,
-      "timestamp": 1661780398179,
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "cardId": 14,
-      "positionId": 1,
-      "timestamp": 1661780407675,
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "cardId": 11,
-      "positionId": 0,
-      "timestamp": 1661780407675,
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "cardId": 43,
-      "positionId": 2,
-      "timestamp": 1661780407675,
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "cardId": 8,
-      "positionId": 3,
-      "timestamp": 1661780407675,
-      "userId": 1,
-      "id": 9
-    },
-    {
-      "cardId": 24,
-      "positionId": 4,
-      "timestamp": 1661780407675,
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "cardId": 41,
-      "positionId": 0,
-      "timestamp": 1661780548752,
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "cardId": 4,
-      "positionId": 1,
-      "timestamp": 1661780548752,
-      "userId": 1,
-      "id": 12
-    },
-    {
-      "cardId": 36,
-      "positionId": 2,
-      "timestamp": 1661780548752,
-      "userId": 1,
-      "id": 13
-    },
-    {
-      "cardId": 24,
-      "positionId": 3,
-      "timestamp": 1661780548752,
-      "userId": 1,
-      "id": 14
-    },
-    {
-      "cardId": 12,
-      "positionId": 4,
-      "timestamp": 1661780548752,
-      "userId": 1,
-      "id": 15
-    },
-    {
-      "cardId": 36,
-      "positionId": 0,
-      "timestamp": 1661780887270,
-      "userId": 1,
-      "id": 16
-    },
-    {
-      "cardId": 37,
-      "positionId": 4,
-      "timestamp": 1661780887270,
-      "userId": 1,
-      "id": 17
-    },
-    {
-      "cardId": 24,
-      "positionId": 1,
-      "timestamp": 1661780887270,
-      "userId": 1,
-      "id": 18
-    },
-    {
-      "cardId": 38,
-      "positionId": 2,
-      "timestamp": 1661780887270,
-      "userId": 1,
-      "id": 19
-    },
-    {
-      "cardId": 10,
-      "positionId": 3,
-      "timestamp": 1661780887270,
-      "userId": 1,
-      "id": 20
-    },
-    {
-      "cardId": 32,
-      "positionId": 0,
-      "timestamp": 1661780895807,
-      "userId": 1,
-      "id": 21
-    },
-    {
-      "cardId": 23,
-      "positionId": 4,
-      "timestamp": 1661780895807,
-      "userId": 1,
-      "id": 22
-    },
-    {
-      "cardId": 22,
-      "positionId": 1,
-      "timestamp": 1661780895807,
-      "userId": 1,
-      "id": 23
-    },
-    {
-      "cardId": 33,
-      "positionId": 3,
-      "timestamp": 1661780895807,
-      "userId": 1,
-      "id": 24
-    },
-    {
-      "cardId": 25,
-      "positionId": 2,
-      "timestamp": 1661780895807,
-      "userId": 1,
-      "id": 25
-    },
-    {
-      "cardId": 32,
-      "positionId": 1,
-      "timestamp": 1661796139169,
-      "userId": 1,
-      "id": 26
-    },
-    {
-      "cardId": 29,
-      "positionId": 0,
-      "timestamp": 1661796139169,
-      "userId": 1,
-      "id": 27
-    },
-    {
-      "cardId": 26,
-      "positionId": 2,
-      "timestamp": 1661796139169,
-      "userId": 1,
-      "id": 28
-    },
-    {
-      "cardId": 18,
-      "positionId": 3,
-      "timestamp": 1661796139169,
-      "userId": 1,
-      "id": 29
-    },
-    {
-      "cardId": 9,
-      "positionId": 4,
-      "timestamp": 1661796139169,
-      "userId": 1,
-      "id": 30
-    },
-    {
-      "cardId": 11,
-      "timestamp": 1661952766758,
-      "userId": 1,
-      "id": 31
-    },
-    {
-      "cardId": 59,
-      "timestamp": 1661952766758,
-      "userId": 1,
-      "id": 32
-    },
-    {
-      "cardId": 87,
-      "timestamp": 1661952766758,
-      "userId": 1,
-      "id": 33
-    },
-    {
-      "cardId": 10,
-      "timestamp": 1661952766758,
-      "userId": 1,
-      "id": 34
-    },
-    {
-      "cardId": 71,
-      "timestamp": 1661952766758,
-      "userId": 1,
-      "id": 35
-    }
-  ],
+  "gameHistory": [],
   "suits": [
-    {
-      "id": 1,
-      "name": "Spades",
-      "description": "New"
-    },
-    {
-      "id": 2,
-      "name": "Hearts",
-      "description": "Healthyish"
-    },
-    {
-      "id": 3,
-      "name": "Diamonds",
-      "description": "Fast/Easy"
-    },
-    {
-      "id": 4,
-      "name": "Clubs",
-      "description": "Classics"
-    }
-  ],
-  "cards": [
     {
       "id": 1,
       "name": "Tomato Pie",
@@ -407,7 +144,7 @@
     },
     {
       "id": 18,
-      "name": "Barbaque Chicken",
+      "name": "Barbecue Chicken",
       "deckId": 1,
       "suitId": 4,
       "isVegetarian": false
@@ -526,7 +263,7 @@
     },
     {
       "id": 35,
-      "name": "Tomato Galete",
+      "name": "Tomato Galette",
       "deckId": 1,
       "suitId": 1,
       "isVegetarian": true
@@ -610,7 +347,7 @@
     },
     {
       "id": 47,
-      "name": "Enchilladas",
+      "name": "Enchiladas",
       "deckId": 2,
       "suitId": 3,
       "isVegetarian": true
@@ -792,7 +529,7 @@
     },
     {
       "id": 74,
-      "name": "Ghormah Sabzi",
+      "name": "Ghormeh Sabzi",
       "deckId": 1,
       "suitId": 1,
       "isVegetarian": true
@@ -960,7 +697,7 @@
     },
     {
       "id": 98,
-      "name": "Foccacia Pizza",
+      "name": "Focaccia Pizza",
       "deckId": 2,
       "suitId": 1,
       "isVegetarian": true
@@ -985,6 +722,27 @@
       "deckId": 2,
       "suitId": 3,
       "isVegetarian": false
+    },
+    {
+      "id": 102,
+      "name": "Poke Bowl",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true
+    },
+    {
+      "id": 103,
+      "name": "Burrito Bowl",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true
+    },
+    {
+      "id": 104,
+      "name": "Minestrone",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true
     }
   ]
 }
