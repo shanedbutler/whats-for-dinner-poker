@@ -73,7 +73,7 @@ export const PlayRound = () => {
         //Advance round
         setRoundCount(roundCount + 1)
     }
-    
+
     //Toggle isHeld property and set to state
     const toggleHandHeld = (id) => {
 
@@ -93,8 +93,8 @@ export const PlayRound = () => {
             <>
                 <section className="hero is-small is-primary">
                     <div className="hero-body ml-3">
-                        <p className="title">
-                            Play
+                        <p>
+                            <h2>Play</h2>
                         </p>
                         <p className="subtitle">
                             {roundCount < 1 ? 'Draw to begin' : `Round ${roundCount} / ${roundsToPlay}`}
@@ -102,7 +102,7 @@ export const PlayRound = () => {
                     </div>
                 </section>
                 <section className="columns is-centered is-multiline is-2-tablet mt-5">
-                    <div className="column">
+                    <div className="column is-hidden-mobile">
                     </div>
                     {roundCount < 1 ?
                         <div className="column is-flex is-justify-content-center">
@@ -113,9 +113,9 @@ export const PlayRound = () => {
                                     <img className="meal-card" src={cardBackPink}></img>
                             }
                         </div>
-                        : handCards.map((card, i) => card && <PlayCard key={card.id} card={card} toggleHandHeld={toggleHandHeld} />)
+                        : handCards.map((card) => card && <PlayCard key={card.id} card={card} toggleHandHeld={toggleHandHeld} />)
                     }
-                    <div className="column">
+                    <div className="column is-hidden-mobile">
                     </div>
                 </section>
                 <section className="is-flex is-justify-content-center">

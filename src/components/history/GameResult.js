@@ -56,8 +56,8 @@ export const GameResult = () => {
         <>
             <section className="hero is-small is-link">
                 <div className="hero-body ml-3">
-                    <p className="title">
-                        Play History
+                    <p>
+                        <h2>Play History</h2>
                     </p>
                     <p className="subtitle">
                         Game results
@@ -73,7 +73,7 @@ export const GameResult = () => {
                 <div className="column">
                 </div>
             </section>
-            <section className="is-flex is-justify-content-center">
+            <section className="field is-grouped is-flex is-justify-content-center">
                 <Link to="/history">
                     <button className="button m-2 mr-1 mb-3">
                         Back to List

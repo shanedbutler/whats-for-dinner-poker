@@ -62,8 +62,8 @@ export const PlayResult = () => {
         <>
             <section className="hero is-small is-primary">
                 <div className="hero-body ml-3">
-                    <p className="title">
-                        Play
+                    <p>
+                        <h2>Play</h2>
                     </p>
                     <p className="subtitle">
                         Final result
@@ -71,7 +71,7 @@ export const PlayResult = () => {
                 </div>
             </section>
             <section className="columns is-centered is-multiline is-2-tablet mt-5">
-                <div className="column">
+                <div className="column is-hidden-mobile">
                 </div>
                 {
                     finalDraw.map(card => {
@@ -79,10 +79,10 @@ export const PlayResult = () => {
                     })
 
                 }
-                <div className="column">
+                <div className="column is-hidden-mobile">
                 </div>
             </section>
-            <section className="is-flex is-justify-content-center">
+            <section className="field is-grouped is-flex is-justify-content-center">
                 <Link to="/play/round" state={{ deckId: finalDraw[0].deckId }}>
                     <button className="button m-2 mr-1 mb-3">
                         Play Again
