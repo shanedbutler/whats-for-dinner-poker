@@ -132,6 +132,6 @@ export const PlayRound = () => {
                 </section>
             </>
             :
-            <Navigate to="/play/result" state={{ finalDraw: handCards }} />
+            <Navigate to={`/play/result/${deck.vegMode ? "veg" : "reg"}`} state={{ finalDraw: handCards }} />
     )
 }

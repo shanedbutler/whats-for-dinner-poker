@@ -12,7 +12,7 @@ export const ApplicationViews = () => {
             <Route path="/" element={<Welcome />} />
             <Route path="/play" element={ <PlayDeck /> } />
             <Route path="/play/round" element={ <PlayRound /> } />
-            <Route path="/play/result" element={ <PlayResult /> } />
+            <Route path="/play/result/:veg" element={ <PlayResult /> } />
             <Route path="/history" element={ <GameHistory /> } />
             <Route path="/history/:id" element={ <GameResult /> } />
         </Routes>
