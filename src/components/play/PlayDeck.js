@@ -45,7 +45,7 @@ export const PlayDeck = () => {
                     name="vegetarianMode"
                     className="switch is-link"
                     checked={vegMode}
-                    onChange={() => setVegMode(!vegMode)}/>
+                    onChange={toggleVegMode}/>
                     <label htmlFor="vegetarianMode">Vegetarian Mode</label>
                 </div>
             </section>
