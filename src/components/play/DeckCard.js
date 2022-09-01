@@ -4,6 +4,16 @@ import cardBackPink from "../../assets/dinner-poker-back-pink-med.png"
 
 export const DeckCard = (props) => {
 
+    const deck = props.deck
+    //Assign variable to deck if vegMode is enabled
+    if (props.vegMode) {
+        deck.vegMode = true
+    }
+    //Handle toggle back to vegMode OFF
+    else if (!props.vegMode && deck.vegMode) {
+        deck.vegMode = false
+    }
+
     return (
         <div className="column is-flex is-flex-direction-column is-align-content-center is-justify-content-center">
 
@@ -16,7 +26,7 @@ export const DeckCard = (props) => {
                                 <img src={cardBackPink}></img>
                         }
                     </figure>
-                    <Link to="/play/round" state={{ deckId: props.deck.id }}>
+                    <Link to="/play/round" state={{ deck: props.deck }}>
                         <button className="button mt-3">
                             {props.deck.name}
                         </button>
