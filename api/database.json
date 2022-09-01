@@ -21,8 +21,191 @@
       "name": "Winter"
     }
   ],
-  "gameHistory": [],
+  "gameHistory": [
+    {
+      "cardId": 93,
+      "positionId": 0,
+      "timestamp": 1662064365231,
+      "userId": 1,
+      "vegMode": false,
+      "id": 1
+    },
+    {
+      "cardId": 21,
+      "positionId": 2,
+      "timestamp": 1662064365231,
+      "userId": 1,
+      "vegMode": false,
+      "id": 2
+    },
+    {
+      "cardId": 60,
+      "positionId": 1,
+      "timestamp": 1662064365231,
+      "userId": 1,
+      "vegMode": false,
+      "id": 3
+    },
+    {
+      "cardId": 102,
+      "positionId": 3,
+      "timestamp": 1662064365231,
+      "userId": 1,
+      "vegMode": false,
+      "id": 4
+    },
+    {
+      "cardId": 61,
+      "positionId": 4,
+      "timestamp": 1662064365231,
+      "userId": 1,
+      "vegMode": false,
+      "id": 5
+    },
+    {
+      "cardId": 24,
+      "positionId": 0,
+      "timestamp": 1662064388795,
+      "userId": 1,
+      "vegMode": false,
+      "id": 6
+    },
+    {
+      "cardId": 5,
+      "positionId": 2,
+      "timestamp": 1662064388795,
+      "userId": 1,
+      "vegMode": false,
+      "id": 7
+    },
+    {
+      "cardId": 77,
+      "positionId": 3,
+      "timestamp": 1662064388795,
+      "userId": 1,
+      "vegMode": false,
+      "id": 8
+    },
+    {
+      "cardId": 69,
+      "positionId": 1,
+      "timestamp": 1662064388795,
+      "userId": 1,
+      "vegMode": false,
+      "id": 9
+    },
+    {
+      "cardId": 48,
+      "positionId": 4,
+      "timestamp": 1662064388795,
+      "userId": 1,
+      "vegMode": false,
+      "id": 10
+    },
+    {
+      "cardId": 36,
+      "positionId": 0,
+      "timestamp": 1662064416841,
+      "userId": 1,
+      "vegMode": false,
+      "id": 11
+    },
+    {
+      "cardId": 4,
+      "positionId": 1,
+      "timestamp": 1662064416841,
+      "userId": 1,
+      "vegMode": false,
+      "id": 12
+    },
+    {
+      "cardId": 88,
+      "positionId": 2,
+      "timestamp": 1662064416841,
+      "userId": 1,
+      "vegMode": false,
+      "id": 13
+    },
+    {
+      "cardId": 46,
+      "positionId": 3,
+      "timestamp": 1662064416841,
+      "userId": 1,
+      "vegMode": false,
+      "id": 14
+    },
+    {
+      "cardId": 10,
+      "positionId": 4,
+      "timestamp": 1662064416841,
+      "userId": 1,
+      "vegMode": false,
+      "id": 15
+    },
+    {
+      "cardId": 22,
+      "positionId": 0,
+      "timestamp": 1662064435893,
+      "userId": 1,
+      "vegMode": true,
+      "id": 16
+    },
+    {
+      "cardId": 29,
+      "positionId": 1,
+      "timestamp": 1662064435893,
+      "userId": 1,
+      "vegMode": true,
+      "id": 17
+    },
+    {
+      "cardId": 6,
+      "positionId": 2,
+      "timestamp": 1662064435893,
+      "userId": 1,
+      "vegMode": true,
+      "id": 18
+    },
+    {
+      "cardId": 63,
+      "positionId": 3,
+      "timestamp": 1662064435893,
+      "userId": 1,
+      "vegMode": true,
+      "id": 19
+    },
+    {
+      "cardId": 1,
+      "positionId": 4,
+      "timestamp": 1662064435893,
+      "userId": 1,
+      "vegMode": true,
+      "id": 20
+    }
+  ],
   "suits": [
+    {
+      "id": 1,
+      "name": "Spades",
+      "description": "New"
+    },
+    {
+      "id": 2,
+      "name": "Hearts",
+      "description": "Healthyish"
+    },
+    {
+      "id": 3,
+      "name": "Diamonds",
+      "description": "Fast/Easy"
+    },
+    {
+      "id": 4,
+      "name": "Clubs",
+      "description": "Classics"
+    }
+  ],
+  "cards": [
     {
       "id": 1,
       "name": "Tomato Pie",
