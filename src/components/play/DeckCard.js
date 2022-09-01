@@ -15,8 +15,10 @@ export const DeckCard = (props) => {
     }
 
     return (
-        <div className="column is-flex is-flex-direction-column is-align-content-center is-justify-content-center">
+        <div className="column is-flex is-justify-content-center is-flex-direction-column">
 
+            <Link to="/play/round" state={{ deck: props.deck }}>
+                <div className="is-flex is-justify-content-center">
                     <figure className="image is-237x340 card-back">
                         {
                             //Alternate deck image colors
@@ -26,11 +28,11 @@ export const DeckCard = (props) => {
                                 <img src={cardBackPink}></img>
                         }
                     </figure>
-                    <Link to="/play/round" state={{ deck: props.deck }}>
-                        <button className="button mt-3">
-                            {props.deck.name}
-                        </button>
-                    </Link>
                 </div>
+                <button className="button mt-3">
+                    {props.deck.name}
+                </button>
+            </Link>
+        </div>
     )
 }

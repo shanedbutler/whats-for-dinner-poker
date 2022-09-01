@@ -1,5 +1,4 @@
 //Module handles API fetches set-up for development use with JSON Server
-//Additional export function for getting user from local storage 
 
 const API = "http://localhost:8088"
 

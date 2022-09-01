@@ -32,9 +32,9 @@ export const Login = () => {
         <>
             <section className="hero is-small is-primary">
                 <div className="hero-body ml-3">
-                    <p>
-                        <h2>Login</h2>
-                    </p>
+                    <h2>
+                        Login
+                    </h2>
                 </div>
             </section>
             <section className="container is-fluid is-max-desktop columns is-centered mt-5">
@@ -73,6 +73,6 @@ export const Login = () => {
                     </form>
                 </div>
             </section>
-            </>
-            )
+        </>
+    )
 }

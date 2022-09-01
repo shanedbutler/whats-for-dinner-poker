@@ -62,7 +62,6 @@ export const PlayResult = () => {
         }
     }
 
-
     const clipboardResults = (e) => {
         e.preventDefault()
 
@@ -76,16 +75,15 @@ export const PlayResult = () => {
         if (isCopied === false) {
             setIsCopied(!isCopied)
         }
-
     }
 
     return (
         <>
             <section className="hero is-small is-primary">
                 <div className="hero-body ml-3">
-                    <p>
-                        <h2>Play</h2>
-                    </p>
+                    <h2>
+                        Play
+                    </h2>
                     <p className="subtitle">
                         Final result
                     </p>

@@ -39,9 +39,9 @@ export const GameHistory = () => {
         <>
             <section className="hero is-small is-link">
                 <div className="hero-body ml-3">
-                    <p>
-                        <h2>Play History</h2>
-                    </p>
+                    <h2>
+                        Play History
+                    </h2>
                     <p className="subtitle">
                         Select a game
                     </p>
