@@ -16,8 +16,6 @@ export const PlayResult = () => {
     let deck = {}
     let wasVeg = null
 
-    console.log(vegParam)
-
     if (vegParam.veg === "veg") {
         wasVeg = true
         deck = {
