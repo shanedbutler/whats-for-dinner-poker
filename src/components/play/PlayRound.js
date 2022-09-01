@@ -98,9 +98,9 @@ export const PlayRound = () => {
             <>
                 <section className="hero is-small is-primary">
                     <div className="hero-body ml-3">
-                        <p>
-                            <h2>Play</h2>
-                        </p>
+                        <h2>
+                            Play
+                        </h2>
                         <p className="subtitle">
                             {roundCount < 1 ? 'Draw to begin' : `Round ${roundCount} / ${roundsToPlay}`}
                         </p>
@@ -110,7 +110,8 @@ export const PlayRound = () => {
                     <div className="column is-hidden-mobile">
                     </div>
                     {roundCount < 1 ?
-                        <div className="column is-flex is-justify-content-center">
+                        <div className="column is-flex is-justify-content-center"
+                        onClick={() => playGame(cardDeck)}>
                             {   //Alternate deck image colors
                                 deck.id % 2 === 0 ?
                                     <img className="meal-card" src={cardBackGreen}></img>
@@ -125,7 +126,7 @@ export const PlayRound = () => {
                 </section>
                 <section className="is-flex is-justify-content-center">
                     <button
-                        className="button mt-3"
+                        className="button mt-3 mb-5"
                         onClick={() => playGame(cardDeck)}>
                         Draw
                     </button>

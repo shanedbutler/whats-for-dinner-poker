@@ -19,7 +19,7 @@ export const GameCard = ({ card, suits }) => {
     }
 
     return (
-        <div className="column">
+        <div className="column is-flex is-justify-content-center">
             <div className="card meal-card has-background-light">
                 <div className="card-content">
                     <span className="icon has-tooltip-primary" data-tooltip={suit?.description}>

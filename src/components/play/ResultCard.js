@@ -19,7 +19,7 @@ export const ResultCard = ( {card} ) => {
     }
 
     return (
-        <div className="column">
+        <div className="column is-flex is-justify-content-center">
             <div className="card meal-card has-background-light">
                 <div className="card-content">
                     <span className="icon has-tooltip-link" data-tooltip={card.suit.description}>

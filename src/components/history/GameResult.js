@@ -56,9 +56,9 @@ export const GameResult = () => {
         <>
             <section className="hero is-small is-link">
                 <div className="hero-body ml-3">
-                    <p>
-                        <h2>Play History</h2>
-                    </p>
+                    <h2>
+                        Play History
+                    </h2>
                     <p className="subtitle">
                         Game results
                     </p>

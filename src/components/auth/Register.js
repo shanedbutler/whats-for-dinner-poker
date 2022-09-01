@@ -54,9 +54,9 @@ export const Register = () => {
         <>
             <section className="hero is-small is-link">
                 <div className="hero-body ml-3">
-                    <p>
-                        <h2>Sign-Up</h2>
-                    </p>
+                    <h2>
+                        Sign-Up
+                    </h2>
                 </div>
             </section>
             <section className="container is-fluid is-max-desktop columns is-centered mt-5">
