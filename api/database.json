@@ -25,6 +25,28 @@
   "suits": [
     {
       "id": 1,
+      "name": "Spades",
+      "description": "New"
+    },
+    {
+      "id": 2,
+      "name": "Hearts",
+      "description": "Healthyish"
+    },
+    {
+      "id": 3,
+      "name": "Diamonds",
+      "description": "Fast/Easy"
+    },
+    {
+      "id": 4,
+      "name": "Clubs",
+      "description": "Classics"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
       "name": "Tomato Pie",
       "deckId": 1,
       "suitId": 4,
