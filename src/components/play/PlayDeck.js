@@ -6,11 +6,16 @@ import { DeckCard } from "./DeckCard"
 export const PlayDeck = () => {
 
     const [decks, setDecks] = useState([])
+    const [vegMode, setVegMode] = useState(false)
 
     useEffect(() => {
         fetchDecks()
         .then(decksArray => setDecks(decksArray))
     }, [])
+
+    const toggleVegMode = () => {
+        setVegMode(!vegMode)
+    }
 
     return (
         <>
@@ -28,9 +33,20 @@ export const PlayDeck = () => {
                 <div className="column">
                 </div>
                 {
-                    decks.map(deck => <DeckCard key={deck.id} deck={deck} />)
+                    decks.map(deck => <DeckCard key={deck.id} deck={deck} vegMode={vegMode}/>)
                 }
                 <div className="column">
+                </div>
+            </section>
+            <section className="columns is-centered is-multiline is-2-tablet mt-5">
+                <div className="field">
+                    <input id="vegetarianMode"
+                    type="checkbox"
+                    name="vegetarianMode"
+                    className="switch is-link"
+                    checked={vegMode}
+                    onChange={toggleVegMode}/>
+                    <label htmlFor="vegetarianMode">Vegetarian Mode</label>
                 </div>
             </section>
         </>

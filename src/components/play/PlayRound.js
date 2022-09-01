@@ -10,7 +10,7 @@ export const PlayRound = () => {
 
     //Selected deck passed through state and assigned
     const location = useLocation()
-    const { deckId } = location.state
+    const { deck } = location.state
 
     const roundsToPlay = 3
     const [roundCount, setRoundCount] = useState(0)
@@ -18,21 +18,26 @@ export const PlayRound = () => {
     const [cardDeck, setCardDeck] = useState([])
     const [handCards, setHandCards] = useState([])
 
-
-    //Fisher–Yates shuffle, add held property, set to state
+    //Prep deck's cards for play
     const prep = (arr) => {
+        //Filter deck's cards if in vegetarian mode
+        if (deck.vegMode) {
+            arr = arr.filter(card => card.isVegetarian)
+        }
+        //Fisher-Yates shuffle
         let i = arr.length
         while (--i > 0) {
             let randIndex = Math.floor(Math.random() * (i + 1));
             [arr[randIndex], arr[i]] = [arr[i], arr[randIndex]];
         }
+        //Assign isHeld property and set to state
         arr.forEach(card => card.isHeld = false)
         setCardDeck(arr)
     }
 
     //GET cards for selected deck and send to shuffle
     useEffect(() => {
-        fetchCards(`?deckId=${deckId}&_expand=suit`)
+        fetchCards(`?deckId=${deck.id}&_expand=suit`)
             .then(cardsArray => prep(cardsArray))
     }, [])
 
@@ -107,7 +112,7 @@ export const PlayRound = () => {
                     {roundCount < 1 ?
                         <div className="column is-flex is-justify-content-center">
                             {   //Alternate deck image colors
-                                deckId % 2 === 0 ?
+                                deck.id % 2 === 0 ?
                                     <img className="meal-card" src={cardBackGreen}></img>
                                     :
                                     <img className="meal-card" src={cardBackPink}></img>
@@ -127,6 +132,6 @@ export const PlayRound = () => {
                 </section>
             </>
             :
-            <Navigate to="/play/result" state={{ finalDraw: handCards }} />
+            <Navigate to={`/play/result/${deck.vegMode ? "veg" : "reg"}`} state={{ finalDraw: handCards }} />
     )
 }
