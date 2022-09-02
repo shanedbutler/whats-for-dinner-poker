@@ -2,21 +2,22 @@
 
 // Import  Google Fonts
 //Josefin Sans & Noto Serif
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@300;400&family=Noto+Serif&display=swap');
 
 //Import Bulma's variables
 @import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
 
 // Set WfDP theme colors
 $green-light: #C3E54A;
-$green: #9FBF2A;
+$green: #759600;
 $green-dark: #748C1B;
 $pink-light: #fff0f7;
-$pink: #F29B88;
-$pink-dark: #F27166;
+$pink: #e87771;
+$pink-dark: #f57064;
 
 // Update Bulma's global variables
-$family-sans-serif: 'Josefin Sans', sans-serif;
+// $family-sans-serif: 'Josefin Sans', sans-serif;
+$family-sans-serif: 'Lato', sans-serif;
 $family-serif: 'Noto Serif', serif;
 $primary: $pink;
 $primary-light: $pink-light;
