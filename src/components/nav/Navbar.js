@@ -13,13 +13,12 @@ export const Navbar = () => {
         setIsActive(!isActive)
     }
     return (
-        <div className="container is-fluid is-max-desktop mt-5">
+        <div className="container is-fluid is-max-desktop pt-3 pb-1">
             <nav className="navbar is-size-5" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link className="navbar-item is-size-4" to="/">
                     <h1>What's for Dinner Poker</h1>
                     </Link>
-
                     <a role="button" aria-label="menu" aria-expanded="false"
                         className={`navbar-burger ${isActive ? "is-active" : ""}`}
                         data-target="auth-nav"
@@ -29,7 +28,6 @@ export const Navbar = () => {
                         <span aria-hidden="true"></span>
                     </a>
                 </div>
-
                 <div id="auth-nav"
                     className={`navbar-menu ${isActive ? "is-active" : ""}`}
                 >
