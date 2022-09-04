@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { fetchUsers } from "../../utils/apiUtils.js"
-import "./Auth.css"
+import "./auth.css"
 
 //Module component handles Login page
 
