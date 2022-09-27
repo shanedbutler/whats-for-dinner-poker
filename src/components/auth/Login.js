@@ -38,7 +38,7 @@ export const Login = () => {
                 </div>
             </section>
             <section className="container is-fluid is-max-desktop columns is-centered mt-5">
-                <div className="column is-5-tablet is-5-desktop is-4-widescreen box p-5">
+                <div className="column is-5-tablet is-5-desktop is-4-widescreen box p-5 form-box">
                     <div className="is-size-5">
                         Player Login
                     </div>
