@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './utils/reportWebVitals';
 import { App } from './components/App';
 import './index.css';
-import './css/mystyles.css';
+import './sass/mystyles.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { Footer } from './components/footer/Footer';
 
