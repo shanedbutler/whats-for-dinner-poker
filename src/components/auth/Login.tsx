@@ -9,7 +9,7 @@ export const Login = () => {
     const [email, setEmail] = useState("bdancer304@gmail.com")
     const navigate = useNavigate()
 
-    const handleLogin = (e) => {
+    const handleLogin = (e: { preventDefault: () => void }) => {
         e.preventDefault()
 
         fetchUsers(`?email=${email}`)  //fetch call
