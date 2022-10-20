@@ -1,22 +1,17 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { fetchUsers, postOption } from "../../utils/apiUtils.js"
 import "./Auth.css"
 
-//Module component handles registration page
+//Component handles registration page
 
 export const Register = () => {
 
     const navigate = useNavigate()
+    const nameRef = useRef()
+    const emailRef = useRef()
 
-    const blankUser = {
-        name: "",
-        email: ""
-    }
-
-    const [user, setUser] = useState(blankUser)
-
-    const registerNewUser = () => {
+    const registerNewUser = (user) => {
         return (
             fetchUsers("", postOption(user))
                 .then(createdUser => {
@@ -31,22 +26,25 @@ export const Register = () => {
     }
 
     const handleRegister = (e) => {
+        const newUser = {
+            name: nameRef.current.value,
+            email: emailRef.current.value
+        }
         e.preventDefault()
         return (
-            fetchUsers(`?email=${user.email}`)
+            fetchUsers(`?email=${newUser.email}`)
                 .then(response => {
                     if (response.length > 0) {
                         window.alert("Account with that email address already exists")
                     }
                     else {
-                        registerNewUser()
+                        registerNewUser(newUser)
                     }
                 }))
     }
 
     const handleCancel = (e) => {
         e.preventDefault()
-        setUser(blankUser)
         navigate("/")
     }
 
@@ -69,13 +67,7 @@ export const Register = () => {
                             <p className="control has-icons-left">
                                 <input className="input"
                                     type="text"
-                                    placeholder="Name"
-                                    onChange={evt => {
-                                        const userCopy = { ...user }
-                                        userCopy.name = evt.target.value
-                                        setUser(userCopy)
-                                    }
-                                    }
+                                    ref={nameRef}
                                     required autoFocus />
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-user"></i>
@@ -87,12 +79,7 @@ export const Register = () => {
                                 <input className="input"
                                     type="email"
                                     placeholder="Email"
-                                    onChange={evt => {
-                                        const userCopy = { ...user }
-                                        userCopy.email = evt.target.value
-                                        setUser(userCopy)
-                                    }
-                                    }
+                                    ref={emailRef}
                                     required />
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-envelope"></i>
