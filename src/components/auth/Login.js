@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { fetchUsers } from "../../utils/apiUtils.js"
 import "./Auth.css"
@@ -6,13 +6,15 @@ import "./Auth.css"
 //Module component handles Login page
 
 export const Login = () => {
-    const [email, setEmail] = useState("bdancer304@gmail.com")
+    const emailRef = useRef()
     const navigate = useNavigate()
 
     const handleLogin = (e) => {
         e.preventDefault()
 
-        fetchUsers(`?email=${email}`)  //fetch call
+        const loginRef = { email: emailRef.current.value }
+
+        fetchUsers(`?email=${loginRef.email}`)
             .then(foundUsers => {
                 if (foundUsers.length === 1) {
                     const user = foundUsers[0]
@@ -48,7 +50,7 @@ export const Login = () => {
                                 <input className="input"
                                     type="email"
                                     placeholder="Email"
-                                    onChange={evt => setEmail(evt.target.value)}
+                                    ref={emailRef}
                                     required autoFocus />
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-envelope"></i>
