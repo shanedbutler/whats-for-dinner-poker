@@ -3,6 +3,9 @@
 What's for Dinner Poker is a web-based game that is played to create a five-meal meal plan. Users select a pre-made deck based on seasonal meal themes or their own user created deck. The two-round interactive game-play results in a final “hand” of five meal cards. Users have the ability to create, edit, and delete both decks and cards.
 
 What's for Dinner Poker seeks to help meal planning by reducing decision fatigue while remaining interactive, and customizable through user-created decks.
+
+![](https://github.com/shanedbutler/whats-for-dinner-poker/blob/main/preview.gif)
+
 ## Take it for a spin
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
