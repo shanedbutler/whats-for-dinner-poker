@@ -81,10 +81,7 @@ export const Welcome = () => {
                         <li>♣ - American Classics</li>
                     </ul>
                     <p>
-                        <strong>
-                            Vegetarian?
-                        </strong>
-                        Enable vegetarian mode to play only with cards that can be prepared without meat!
+                        <strong>Vegetarian?</strong> Enable vegetarian mode to play only with cards that can be prepared without meat!
                     </p>
                     <p>
                         More decks, cards, and features are planned!
