@@ -18,7 +18,7 @@ export const AuthNav = () => {
                     </Link>
 
                     <a role="button" aria-label="menu" aria-expanded="false"
-                        className={`navbar-burger ${isActive ? "is-active" : ""}`}
+                        className={`navbar-burger ${isActive && "is-active"}`}
                         data-target="auth-nav"
                         onClick={toggleActive}>
                         <span aria-hidden="true"></span>
@@ -28,7 +28,7 @@ export const AuthNav = () => {
                 </div>
 
                 <div id="auth-nav"
-                    className={`navbar-menu ${isActive ? "is-active" : ""}`}
+                    className={`navbar-menu ${isActive && "is-active"}`}
                 >
                     <div className="navbar-start">
 

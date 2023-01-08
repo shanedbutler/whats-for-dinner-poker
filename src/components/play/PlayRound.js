@@ -35,7 +35,7 @@ export const PlayRound = () => {
         setCardDeck(arr)
     }
 
-    //GET cards for selected deck and send to shuffle
+    //GET cards for selected deck and send to prep shuffle function
     useEffect(() => {
         fetchCards(`?deckId=${deck.id}&_expand=suit`)
             .then(cardsArray => prep(cardsArray))

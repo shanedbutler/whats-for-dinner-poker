@@ -1,6 +1,8 @@
 export const GameCard = ({ card, suits }) => {
+
     let suitIcon = ""
     const suit = suits.find(suit => suit.id === card.suitId)
+    
     switch (suit?.name) {
         case 'Spades':
             suitIcon = "♠️"

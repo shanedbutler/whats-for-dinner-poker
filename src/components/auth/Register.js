@@ -11,6 +11,11 @@ export const Register = () => {
     const nameRef = useRef()
     const emailRef = useRef()
 
+    /**
+     * Register user object, via fetch POST and then set user response object to local storage
+     * @param {object} user 
+     * @returns Void?
+     */
     const registerNewUser = (user) => {
         return (
             fetchUsers("", postOption(user))
@@ -93,7 +98,9 @@ export const Register = () => {
                                 </button>
                             </p>
                             <p className="control">
-                                <button onClick={handleCancel} className="button  is-primary">Cancel</button>
+                                <button onClick={handleCancel} className="button  is-primary">
+                                    Cancel
+                                </button>
                             </p>
                         </fieldset>
                     </form>

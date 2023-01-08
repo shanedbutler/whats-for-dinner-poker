@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { fetchDecks } from "../../utils/apiUtils"
 import { DeckCard } from "./DeckCard"
 
-
 export const PlayDeck = () => {
 
     const [decks, setDecks] = useState([])

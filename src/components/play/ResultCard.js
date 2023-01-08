@@ -1,6 +1,7 @@
 export const ResultCard = ( {card} ) => {
 
     let suitIcon = ""
+    
     switch (card.suit.name) {
         case 'Spades':
             suitIcon = "♠️"

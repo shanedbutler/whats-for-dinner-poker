@@ -108,9 +108,9 @@ export const PlayResult = () => {
                     </button>
                 </Link>
                 <button
-                    className={`${!isSaved ? "" : "is-link is-outlined"} button m-2 mr-1 mb-3`}
+                    className={`${isSaved && "is-link is-outlined"} button m-2 mr-1 mb-3`}
                     onClick={(e) => postResults(e)}>
-                    {!isSaved ? "" :
+                    {isSaved &&
                         <span className="icon is-small">
                             <i className="fas fa-check"></i>
                         </span>
@@ -118,9 +118,9 @@ export const PlayResult = () => {
                     <span>{!isSaved ? "Save" : "Saved"}</span>
                 </button>
                 <button
-                    className={`${!isCopied ? "" : "is-link is-outlined"} button m-2 mb-3`}
+                    className={`${isCopied && "is-link is-outlined"} button m-2 mb-3`}
                     onClick={(e) => clipboardResults(e)}>
-                    {!isCopied ? "" :
+                    {isCopied &&
                         <span className="icon is-small">
                             <i className="fas fa-check"></i>
                         </span>
