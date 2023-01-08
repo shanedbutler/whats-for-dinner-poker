@@ -80,9 +80,9 @@ export const GameResult = () => {
                     </button>
                 </Link>
                 <button
-                    className={`${!isCopied ? "" : "is-primary is-outlined"} button m-2 mb-3`}
+                    className={`${isCopied && "is-primary is-outlined"} button m-2 mb-3`}
                     onClick={(e) => clipboardResults(e)}>
-                    {!isCopied ? "" :
+                    {isCopied &&
                         <span className="icon is-small">
                             <i className="fas fa-check"></i>
                         </span>

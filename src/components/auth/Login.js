@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom"
 import { fetchUsers } from "../../utils/apiUtils.js"
 import "./Auth.css"
 
-//Module component handles Login page
-
 export const Login = () => {
     const emailRef = useRef()
     const navigate = useNavigate()

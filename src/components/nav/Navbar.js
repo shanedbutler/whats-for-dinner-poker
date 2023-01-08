@@ -29,7 +29,7 @@ export const Navbar = () => {
                     </a>
                 </div>
                 <div id="auth-nav"
-                    className={`navbar-menu ${isActive ? "is-active" : ""}`}
+                    className={`navbar-menu ${isActive && "is-active"}`}
                 >
                     <div className="navbar-start">
 
@@ -47,13 +47,11 @@ export const Navbar = () => {
                         </Link>
                         {
                             localStorage.getItem("dinnerPokerUser")
-                                ?
+                                &&
                                 <Link className="navbar-item" to="" onClick={() => {
                                     localStorage.removeItem("dinnerPokerUser")
                                     navigate("/", { replace: true })
                                 }}>Logout</Link>
-
-                                : ""
                         }
                     </div>
                 </div>
