@@ -14,7 +14,7 @@ This project uses json-server in development.
 
 In the project directory, you can run:
 #### `npm install`
-#### `sass --no-source-map src/sass/mystyles.scss:src/css/mystyles.css`
+#### `npx sass --no-source-map src/sass/mystyles.scss:src/css/mystyles.css`
 #### `npx json-server -p 8088 api/database.json`
 #### `npm start`
 
