@@ -38,7 +38,7 @@ export const About = () => {
                     <p>
                         What's for Dinner Poker is designed and built by <a href="https://github.com/shanedbutler">Shane Butler</a>.
                         The web-application was initially created in the summer of 2022 as a front-end capstone project to the
-                        <a href="https://generationwv.org/programs/newforce/">NewForce</a> coding school.
+                        <a href="https://generationwv.org/programs/newforce/"> NewForce</a> coding school.
                         The app was built with React, Bulma, and SCSS. All source files are available on GitHub.
                         To support Shane, please star the project or follow him on GitHub. Thank you and bon appetit!
                     </p>
