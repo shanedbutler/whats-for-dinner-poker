@@ -75,10 +75,10 @@ export const Welcome = () => {
                         Each dinner card belongs to one of four suits, hover over them during the game to see their description.
                     </p>
                     <ul>
-                        <li>♠️ - Certified Fresh</li>
-                        <li>♥️ - Healthyish</li>
-                        <li>♦️ - Quick and Easy</li>
-                        <li>♣ - American Classics</li>
+                        <li className='mt-2'>♠️ - Certified Fresh</li>
+                        <li className='mt-2'>♥️ - Healthyish</li>
+                        <li className='mt-2'>♦️ - Quick and Easy</li>
+                        <li><span className="is-size-4">♣ </span>- American Classics</li>
                     </ul>
                     <p>
                         <strong>Vegetarian?</strong> Enable vegetarian mode to play only with cards that can be prepared without meat!
