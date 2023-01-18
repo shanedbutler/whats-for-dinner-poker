@@ -1,0 +1,24 @@
+{
+"suits": [
+    {
+      "id": 1,
+      "name": "Spades",
+      "description": "Certified Fresh"
+    },
+    {
+      "id": 2,
+      "name": "Hearts",
+      "description": "Healthyish"
+    },
+    {
+      "id": 3,
+      "name": "Diamonds",
+      "description": "Quick and Easy"
+    },
+    {
+      "id": 4,
+      "name": "Clubs",
+      "description": "Classics"
+    }
+  ]
+}

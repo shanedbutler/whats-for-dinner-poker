@@ -1,0 +1,12 @@
+{
+"decks": [
+    {
+      "id": 1,
+      "name": "Summer"
+    },
+    {
+      "id": 2,
+      "name": "Winter"
+    }
+  ]
+}
