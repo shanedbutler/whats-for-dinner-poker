@@ -8,7 +8,6 @@ import "./Play.css"
 
 export const PlayRound = () => {
 
-    //Selected deck passed through state and assigned
     const location = useLocation()
     const { deck } = location.state
 
@@ -18,78 +17,75 @@ export const PlayRound = () => {
     const [cardDeck, setCardDeck] = useState([])
     const [handCards, setHandCards] = useState([])
 
-    //Prep deck's cards for play
+    /**
+     * Prepare deck of cards for play and set to state.
+     * Filter card array if vegetarian mode is enabled,
+     * shuffle card array order,
+     * add isHeld property to cards and default to false.
+     * @param {array} arr 
+     */
     const prep = (arr) => {
-        //Filter deck's cards if in vegetarian mode
         if (deck.vegMode) {
             arr = arr.filter(card => card.isVegetarian)
         }
-        //Fisher-Yates shuffle
         let i = arr.length
         while (--i > 0) {
             let randIndex = Math.floor(Math.random() * (i + 1));
             [arr[randIndex], arr[i]] = [arr[i], arr[randIndex]];
         }
-        //Assign isHeld property and set to state
         arr.forEach(card => card.isHeld = false)
         setCardDeck(arr)
     }
 
-    //GET cards for selected deck and send to prep shuffle function
+    /**
+     * Get cards from API for selected deck, prep deck, and set to state
+     */
     useEffect(() => {
         fetchCards(`?deckId=${deck.id}&_expand=suit`)
             .then(cardsArray => prep(cardsArray))
     }, [])
 
+    /**
+     * Draw new cards less than number held,
+     * insert drawn cards in proper position to replace non-held cards if existing,
+     * update hand and deck state, and advance round.
+     * @param {array} cards 
+     */
     const playGame = (cards) => {
 
-        //Draw count is set to 5 less the number of cards held 
         const heldCards = handCards.filter(card => card.isHeld)
         const drawCount = 5 - heldCards.length
-
-        //Remove (draw) required cards from card deck and assign to drawnCards
         let drawnCards = cards.splice(-drawCount)
-
-        //Insert drawnCards to heldCards in the correct position if any heldCards exist
         let updatedHand = handCards
-        if (heldCards.length) {
 
-            //Find index values of handCards that are to be replaced
+        if (heldCards.length) {
             let indexesToReplace = []
             handCards.forEach((card, i) => {
                 if (!card.isHeld) {
                     indexesToReplace.push(i)
                 }
             })
-
-            //Add the drawn cards at each index to replace
-            indexesToReplace.forEach((index, jdex) => {
-                updatedHand[index] = drawnCards[jdex]
+            indexesToReplace.forEach((i, j) => {
+                updatedHand[i] = drawnCards[j]
             })
-            //Set state to round's hand of cards to be displayed
             setHandCards(updatedHand)
-
-            //Update state with array minus removed cards
             setCardDeck(cards)
-        }
-        else {
+        } else {
             setHandCards(drawnCards)
         }
-        //Advance round
         setRoundCount(roundCount + 1)
     }
 
-    //Toggle isHeld property and set to state
-    const toggleHandHeld = (id) => {
+    /**
+     * Toggle held property of cards in hand
+     * @param {int} cardId 
+     */
+    const toggleHandHeld = (cardId) => {
 
-        //Copy hand state
         const handCardsCopy = handCards
-
-        //Find card and toggle boolean property
-        const cardToToggle = handCardsCopy.find(card => card.id === id)
+        const cardToToggle = handCardsCopy.find(card => card.id === cardId)
         cardToToggle.isHeld = !cardToToggle.isHeld
 
-        //Set state
         setHandCards(handCardsCopy)
     }
 
@@ -112,7 +108,7 @@ export const PlayRound = () => {
                     {roundCount < 1 ?
                         <div className="column is-flex is-justify-content-center"
                         onClick={() => playGame(cardDeck)}>
-                            {   //Alternate deck image colors
+                            {
                                 deck.id % 2 === 0 ?
                                     <img className="meal-card" src={cardBackGreen}></img>
                                     :
