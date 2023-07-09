@@ -1,6 +1,7 @@
 from flask import Flask
 from .models import db
 from .routes import api
+from .seed import seed_data
 
 def create_app():
     app = Flask(__name__)
@@ -13,5 +14,6 @@ def create_app():
 
     with app.app_context():
         db.create_all()
+        seed_data()
 
     return app

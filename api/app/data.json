@@ -1,0 +1,862 @@
+{
+  "decks": [
+    {
+      "id": 1,
+      "name": "Summer",
+      "description": "Summer is the best time fresh, light, and delicious foods"
+    },
+    {
+      "id": 2,
+      "name": "Winter",
+      "description": "Winter is the best time for hearty, warm, and filling foods"
+    }
+  ],
+  "suits": [
+    {
+      "id": 1,
+      "name": "Spades",
+      "description": "Certified Fresh"
+    },
+    {
+      "id": 2,
+      "name": "Hearts",
+      "description": "Healthyish"
+    },
+    {
+      "id": 3,
+      "name": "Diamonds",
+      "description": "Quick and Easy"
+    },
+    {
+      "id": 4,
+      "name": "Clubs",
+      "description": "Classics"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "name": "Tomato Pie",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "Savory tomato goodness"
+    },
+    {
+      "id": 2,
+      "name": "Potato Salad",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A summer classic"
+    },
+    {
+      "id": 3,
+      "name": "Cucumber Salad",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "Cool and refreshing"
+    },
+    {
+      "id": 4,
+      "name": "Pasta Fagioli",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A hearty Italian soup"
+    },
+    {
+      "id": 5,
+      "name": "Japanese Curry",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A hearty Japanese stew"
+    },
+    {
+      "id": 6,
+      "name": "Purloo",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A hearty Southern rice dish"
+    },
+    {
+      "id": 7,
+      "name": "Spaghetti",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A plate of pasta with sauce"
+    },
+    {
+      "id": 8,
+      "name": "Chili",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A hearty stew with beans"
+    },
+    {
+      "id": 9,
+      "name": "Okonomiyaki",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A savory Japanese pancake"
+    },
+    {
+      "id": 10,
+      "name": "Split Pea Soup",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A delicious soup with peas"
+    },
+    {
+      "id": 11,
+      "name": "Mapo Tofu",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A spicy tofu dish"
+    },
+    {
+      "id": 12,
+      "name": "Cabbage Rolls",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A baked stuffed cabbage dish"
+    },
+    {
+      "id": 13,
+      "name": "Roast Chicken",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": false,
+      "description": "A classic roast chicken dinner"
+    },
+    {
+      "id": 14,
+      "name": "Chicken Adobo",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": false,
+      "description": "A Filipino chicken stew"
+    },
+    {
+      "id": 15,
+      "name": "Cauliflower Soup",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A simple, yet rich creamy soup"
+    },
+    {
+      "id": 16,
+      "name": "Coq au Vin",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": false,
+      "description": "A classic French chicken stew"
+    },
+    {
+      "id": 17,
+      "name": "Mushroom Bourguignon",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A vegetarian take on a classic French stew"
+    },
+    {
+      "id": 18,
+      "name": "Barbecue Chicken",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": false,
+      "description": "A classic with sweet and tangy sauce"
+    },
+    {
+      "id": 19,
+      "name": "Hamburgers",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A classic patty on a bun"
+    },
+    {
+      "id": 20,
+      "name": "Hard Tacos",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "Tacos with any filling you like"
+    },
+    {
+      "id": 21,
+      "name": "Asian Slaw",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A refreshing cabbage salad"
+    },
+    {
+      "id": 22,
+      "name": "Succotash",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A Southern dish with corn and lima beans"
+    },
+    {
+      "id": 23,
+      "name": "Gazpacho",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A refreshing cold vegetable soup"
+    },
+    {
+      "id": 24,
+      "name": "Polenta",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A hearty Italian cornmeal dish"
+    },
+    {
+      "id": 25,
+      "name": "Fried Fish",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": false,
+      "description": "A crispy fish dinner"
+    },
+    {
+      "id": 26,
+      "name": "Chilled Soba",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A refreshing Japanese noodle dish"
+    },
+    {
+      "id": 27,
+      "name": "Fresh Spring Rolls",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Vietnamese dish with your choice of filling"
+    },
+    {
+      "id": 28,
+      "name": "Lentil Soup",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A warming soup with lentils and spices"
+    },
+    {
+      "id": 29,
+      "name": "Okra Soup",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Southern soup with okra and tomatoes"
+    },
+    {
+      "id": 30,
+      "name": "Ratatouille",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A classic French vegetable stew"
+    },
+    {
+      "id": 31,
+      "name": "Fried Rice",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A Chinese dish with rice and vegetables"
+    },
+    {
+      "id": 32,
+      "name": "Kung Pao Chicken",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": false,
+      "description": "A Chinese dish with chicken and peanuts"
+    },
+    {
+      "id": 33,
+      "name": "Tomato Sandwiches",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A Southern staple with tomatoes and mayo"
+    },
+    {
+      "id": 34,
+      "name": "Beef and Barley Soup",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": false,
+      "description": "A rich soup with beef and barley"
+    },
+    {
+      "id": 35,
+      "name": "Tomato Galette",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A savory tart with tomatoes and cheese"
+    },
+    {
+      "id": 36,
+      "name": "Sheet Pan Dinner",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A one-pan dinner with your choice roasted"
+    },
+    {
+      "id": 37,
+      "name": "Borscht",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "An Eastern European soup with beets and cabbage"
+    },
+    {
+      "id": 38,
+      "name": "Hoppin' John",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Southern dish with black-eyed peas and rice"
+    },
+    {
+      "id": 39,
+      "name": "Ramen",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A quick to make Japanese noodle soup"
+    },
+    {
+      "id": 40,
+      "name": "Cheese Fondue",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Swiss dish with melted cheese and bread"
+    },
+    {
+      "id": 41,
+      "name": "Cassoulet",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A rich French stew with beans and sausage"
+    },
+    {
+      "id": 42,
+      "name": "Roast Cauliflower",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A roasted cauliflower dish with your choice of seasoning"
+    },
+    {
+      "id": 43,
+      "name": "Tortellini",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A pasta filled with cheese with your choice of sauce"
+    },
+    {
+      "id": 44,
+      "name": "Okra and Tomatoes",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A Southern dish with okra and tomatoes"
+    },
+    {
+      "id": 45,
+      "name": "Hot Dogs",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A classic with your choice of toppings"
+    },
+    {
+      "id": 46,
+      "name": "Tomato Bisque",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A creamy soup with tomatoes"
+    },
+    {
+      "id": 47,
+      "name": "Enchiladas",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A Mexican dish with tortillas and cheese"
+    },
+    {
+      "id": 48,
+      "name": "Pozole",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Mexican soup with hominy and pork"
+    },
+    {
+      "id": 49,
+      "name": "Keema Curry",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": false,
+      "description": "An Indian dish with ground beef and peas"
+    },
+    {
+      "id": 50,
+      "name": "Quesadillas",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A Mexican classic of grilled folded tortillas and cheese"
+    },
+    {
+      "id": 51,
+      "name": "Jujeh Kabab",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": false,
+      "description": "A Persian kabob dish with chicken and saffron"
+    },
+    {
+      "id": 52,
+      "name": "Stir Fry",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A quick to make dish with your choice of vegetables and protein"
+    },
+    {
+      "id": 53,
+      "name": "Latkes",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A Jewish dish of fried potato pancakes"
+    },
+    {
+      "id": 54,
+      "name": "Hot Pot",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A Chinese dish of broth and your choice of ingredients"
+    },
+    {
+      "id": 55,
+      "name": "Lasagna",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "An Italian dish of layered pasta, spinach, and bechamel sauce"
+    },
+    {
+      "id": 57,
+      "name": "Salmon Cakes",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": false,
+      "description": "A dish of salmon and bread crumbs fried into cakes"
+    },
+    {
+      "id": 58,
+      "name": "Loobia Polo",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Persian dish of rice, tomato, and green beans"
+    },
+    {
+      "id": 59,
+      "name": "Gumbo",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A Southern dish of stewed vegetables and meat or seafood"
+    },
+    {
+      "id": 60,
+      "name": "Pizza",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A classic Italian flatbread with toppings of your choice"
+    },
+    {
+      "id": 61,
+      "name": "Aloo Gobi",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "An Indian dish of potatoes and cauliflower"
+    },
+    {
+      "id": 62,
+      "name": "Stuffed Peppers",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A dish of bell peppers stuffed with your choice of ingredients"
+    },
+    {
+      "id": 63,
+      "name": "Zucchini Fritters",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A dish of fried zucchini and bread crumbs"
+    },
+    {
+      "id": 64,
+      "name": "Palak Paneer",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "An Indian dish of spinach and cheese"
+    },
+    {
+      "id": 65,
+      "name": "Pesto Pasta",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A dish of pasta with flavorful basil based sauce"
+    },
+    {
+      "id": 66,
+      "name": "Chili Tofu",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A dish of pan fried tofu and chili sauce"
+    },
+    {
+      "id": 67,
+      "name": "Italian Wedding Soup",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": false,
+      "description": "An Italian soup with meatballs and vegetables"
+    },
+    {
+      "id": 68,
+      "name": "Salmon",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": false,
+      "description": "A dish of salmon cooked to your preference"
+    },
+    {
+      "id": 69,
+      "name": "Fisherman's Stew",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": false,
+      "description": "A spicy pot of seafood and vegetables"
+    },
+    {
+      "id": 70,
+      "name": "One Pot Couscous",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A dish of couscous and vegetables cooked in one pot"
+    },
+    {
+      "id": 71,
+      "name": "Thai Curry",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A dish of curry and vegetables served over rice"
+    },
+    {
+      "id": 72,
+      "name": "Congee",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Chinese rice porridge with your choice of ingredients"
+    },
+    {
+      "id": 73,
+      "name": "Fesenjan",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Persian dish of pomegranate and walnuts"
+    },
+    {
+      "id": 74,
+      "name": "Ghormeh Sabzi",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Persian dish of herbs and kidney beans"
+    },
+    {
+      "id": 75,
+      "name": "Chana Masala",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "An Indian dish of chickpeas and spices"
+    },
+    {
+      "id": 76,
+      "name": "Sushi",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A Japanese dish of rice and raw fish"
+    },
+    {
+      "id": 77,
+      "name": "French Onion Soup",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A French soup of caramelized onions and cheese"
+    },
+    {
+      "id": 78,
+      "name": "Nikujaga",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": false,
+      "description": "A Japanese stew of meat and potatoes"
+    },
+    {
+      "id": 79,
+      "name": "Bibimbap",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A Korean dish of rice and vegetables"
+    },
+    {
+      "id": 80,
+      "name": "Oyakodon",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Japanese dish of chicken and egg over rice"
+    },
+    {
+      "id": 81,
+      "name": "Omurice",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A Japanese dish of rice and egg"
+    },
+    {
+      "id": 82,
+      "name": "Japchae",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A Korean dish of glass noodles and vegetables"
+    },
+    {
+      "id": 83,
+      "name": "Donburi",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A Japanese rice bowl with meat and vegetables"
+    },
+    {
+      "id": 84,
+      "name": "Soba Noodle Soup",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A Japanese soup of buckwheat noodles and vegetables"
+    },
+    {
+      "id": 85,
+      "name": "Chicken Parmigiana",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": false,
+      "description": "An Italian dish of breaded chicken and tomato sauce"
+    },
+    {
+      "id": 86,
+      "name": "Avgolemono",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": false,
+      "description": "A tangy Greek soup of chicken and lemon"
+    },
+    {
+      "id": 87,
+      "name": "Ropa Vieja",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": false,
+      "description": "A Cuban dish of shredded beef and vegetables"
+    },
+    {
+      "id": 88,
+      "name": "Pho",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A Vietnamese soup of noodles and meat"
+    },
+    {
+      "id": 89,
+      "name": "Biriyani",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "An Indian dish of rice and meat"
+    },
+    {
+      "id": 90,
+      "name": "Baked Potato",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A baked potato loaded up with your choice of toppings"
+    },
+    {
+      "id": 91,
+      "name": "Matzo Ball Soup",
+      "deckId": 2,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A Jewish soup of chicken and dumplings"
+    },
+    {
+      "id": 92,
+      "name": "BLT",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A sandwich of bacon, lettuce, and tomato"
+    },
+    {
+      "id": 93,
+      "name": "Clam Linguini",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": false,
+      "description": "An Italian dish of clams and pasta"
+    },
+    {
+      "id": 94,
+      "name": "Tian",
+      "deckId": 1,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "A French dish of layered vegetables"
+    },
+    {
+      "id": 95,
+      "name": "Sauteed Beans",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A dish of sauteed green beans elevated into a meal"
+    },
+    {
+      "id": 96,
+      "name": "Chicken Tagine",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": false,
+      "description": "A Moroccan dish of chicken and vegetables"
+    },
+    {
+      "id": 97,
+      "name": "Fish Tacos",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": false,
+      "description": "A Mexican taco of fish and shredded cabbage"
+    },
+    {
+      "id": 98,
+      "name": "Focaccia Pizza",
+      "deckId": 2,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A pizza made on focaccia bread"
+    },
+    {
+      "id": 99,
+      "name": "Salad Nicoise ",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A French salad of tuna and vegetables"
+    },
+    {
+      "id": 100,
+      "name": "Mac N Cheese",
+      "deckId": 1,
+      "suitId": 3,
+      "isVegetarian": true,
+      "description": "A classic American dish of macaroni and cheese"
+    },
+    {
+      "id": 101,
+      "name": "Red Braised Pork",
+      "deckId": 2,
+      "suitId": 3,
+      "isVegetarian": false,
+      "description": "A Chinese dish of richly cooked pork"
+    },
+    {
+      "id": 102,
+      "name": "Poke Bowl",
+      "deckId": 1,
+      "suitId": 1,
+      "isVegetarian": true,
+      "description": "A Hawaiian dish of raw fish and rice"
+    },
+    {
+      "id": 103,
+      "name": "Burrito Bowl",
+      "deckId": 1,
+      "suitId": 4,
+      "isVegetarian": true,
+      "description": "A Mexican dish of rice, beans and cheese"
+    },
+    {
+      "id": 104,
+      "name": "Minestrone",
+      "deckId": 2,
+      "suitId": 2,
+      "isVegetarian": true,
+      "description": "An Italian soup of vegetables and pasta"
+    }
+  ]
+}
