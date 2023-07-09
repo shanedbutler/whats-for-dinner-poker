@@ -1,6 +1,4 @@
 import { Link, useLocation, useParams } from "react-router-dom"
-import { fetchHistory, postOption } from "../../utils/apiUtils"
-import { getLocalUser } from "../../utils/utils"
 import { ResultCard } from "./ResultCard"
 import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
@@ -31,36 +29,9 @@ export const PlayResult = () => {
         }
     }
 
-    const [isSaved, setIsSaved] = useState(false)
     const [isCopied, setIsCopied] = useState(false)
 
     const { width, height } = useWindowSize()
-
-    const postResults = (e) => {
-        e.preventDefault()
-
-        if (isSaved === false) {
-
-            //Build object data for storage and add to array
-            const gameResult = []
-            finalDraw.forEach((card, i) => {
-                const cardObject = {
-                    cardId: card.id,
-                    positionId: i,
-                    timestamp: Date.now(),
-                    userId: getLocalUser().id,
-                    vegMode: wasVeg
-                }
-                gameResult.push(cardObject)
-            })
-
-            //POST each cardObject from array to database
-            Promise.all(gameResult.map(historyCard => fetchHistory("", postOption(historyCard))))
-
-            //Toggle state
-            setIsSaved(!isSaved)
-        }
-    }
 
     const clipboardResults = (e) => {
         e.preventDefault()
@@ -107,16 +78,6 @@ export const PlayResult = () => {
                         Play Again
                     </button>
                 </Link>
-                <button
-                    className={`${isSaved && "is-link is-outlined"} button m-2 mr-1 mb-3`}
-                    onClick={(e) => postResults(e)}>
-                    {isSaved &&
-                        <span className="icon is-small">
-                            <i className="fas fa-check"></i>
-                        </span>
-                    }
-                    <span>{!isSaved ? "Save" : "Saved"}</span>
-                </button>
                 <button
                     className={`${isCopied && "is-link is-outlined"} button m-2 mb-3`}
                     onClick={(e) => clipboardResults(e)}>
