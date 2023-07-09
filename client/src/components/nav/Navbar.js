@@ -17,7 +17,7 @@ export const Navbar = () => {
             <nav className="navbar is-size-5" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link className="navbar-item is-size-4" to="/">
-                    <h1>What's for Dinner Poker</h1>
+                        <h1>What's for Dinner Poker</h1>
                     </Link>
                     <a role="button" aria-label="menu" aria-expanded="false"
                         className={`navbar-burger ${isActive ? "is-active" : ""}`}
@@ -35,25 +35,17 @@ export const Navbar = () => {
 
                     </div>
 
-                    <div className="navbar-end">
+                    <div className="navbar-end mr-5">
                         <Link
                             className="navbar-item" to="/play">
                             Play
                         </Link>
-
                         <Link
-                            className="navbar-item" to="/history">
-                            Game History
+                            className="navbar-item" to="/">
+                            About
                         </Link>
-                        {
-                            localStorage.getItem("dinnerPokerUser")
-                                &&
-                                <Link className="navbar-item" to="" onClick={() => {
-                                    localStorage.removeItem("dinnerPokerUser")
-                                    navigate("/", { replace: true })
-                                }}>Logout</Link>
-                        }
                     </div>
+                    
                 </div>
             </nav >
         </div>
