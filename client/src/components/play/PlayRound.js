@@ -110,9 +110,9 @@ export const PlayRound = () => {
                         onClick={() => playGame(cardDeck)}>
                             {
                                 deck.id % 2 === 0 ?
-                                    <img className="meal-card" src={cardBackGreen}></img>
+                                    <img className="meal-card" src={cardBackGreen} alt="Green Card Back"></img>
                                     :
-                                    <img className="meal-card" src={cardBackPink}></img>
+                                    <img className="meal-card" src={cardBackPink} alt="Pink Card Back"></img>
                             }
                         </div>
                         : handCards.map((card) => card && <PlayCard key={card.id} card={card} toggleHandHeld={toggleHandHeld} />)
