@@ -127,3 +127,5 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+fly.toml
