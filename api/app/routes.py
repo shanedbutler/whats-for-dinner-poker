@@ -17,6 +17,20 @@ def get_decks():
 
     return jsonify(results)
 
+@api.route('/api/suits/', methods=['GET'])
+def get_suits():
+    suits = Suit.query.all()
+    results = []
+
+    for suit in suits:
+        results.append({
+            "id": suit.id,
+            "name": suit.name,
+            "description": suit.description
+        })
+
+    return jsonify(results)
+
 @api.route('/api/cards/', methods=['GET'])
 def get_cards():
     deck_id = request.args.get('deck')
@@ -42,3 +56,7 @@ def get_cards():
         })    
 
     return jsonify(results)
+
+@api.errorhandler(404)
+def not_found(e):
+    return api.send_static_file('index.html')

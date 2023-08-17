@@ -23,9 +23,9 @@ export const DeckCard = (props) => {
                         {
                             //Alternate deck image colors
                             props.deck.id % 2 === 0 ?
-                                <img src={cardBackGreen}></img>
+                                <img src={cardBackGreen} alt="Green Card Back"></img>
                                 :
-                                <img src={cardBackPink}></img>
+                                <img src={cardBackPink} alt="Pink Card Back"></img>
                         }
                     </figure>
                 </div>

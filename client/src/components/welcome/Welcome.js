@@ -14,7 +14,7 @@ export const Welcome = () => {
                     </p>
                 </div>
             </section>
-            <section className="columns">
+            <section className="columns pb-5">
                 <div className="column is-narrow m-5 is-hidden-mobile">
                 </div>
                 <article className="column content m-5">
@@ -78,8 +78,8 @@ export const Welcome = () => {
                         of the game make up your meal plan! 🎊 
                     </p>
                     <p>
-                        Copy the results to your clipboard,
-                        save them to your game history list, or just keep playing!
+                        Copy the results to your clipboard to share
+                        or save your meal plan, or just keep playing!
                     </p>
                     <h3>
                         Features
